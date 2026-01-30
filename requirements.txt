@@ -1,0 +1,8 @@
+paddlepaddle==2.6.2
+paddleocr==2.7.0.3
+
+#DisrilBERT
+transformers==4.44.2
+torch==2.2.2 #딥러닝계산엔진
+accelerate==0.34.2 #보조
+
