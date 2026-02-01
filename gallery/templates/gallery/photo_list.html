@@ -65,5 +65,17 @@
     {% endfor %}
 </div>
 
+<div class="google-upload-toggle">
+  <button id="google-upload-btn">
+    구글 사진 업로드 켜기
+  </button>
+</div>
+
+<script>
+  document.getElementById("google-upload-btn").onclick = () => {
+    window.location.href = "/api/v1/photos/google/authorize";
+  };
+</script>
+
 <script src="{% static 'js/photo_list.js' %}"></script>
 {% endblock %}

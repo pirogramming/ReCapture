@@ -13,6 +13,7 @@ from photos.serializers.google import (
 )
 from photos.serializers.response import APIResponse
 from photos.services.google_photos_service import GooglePhotosService
+from django.shortcuts import redirect
 import os
 
 # 1. 구글 연동 상태 조회
@@ -56,11 +57,7 @@ def google_authorize(request):
         # state를 세션에 저장 (CSRF 방지)
         request.session['google_oauth_state'] = state
         
-        response_data = APIResponse.success({
-            "authUrl": auth_url
-        })
-        
-        return Response(response_data, status=status.HTTP_200_OK)
+        return redirect(auth_url)
     
     except Exception as e:
         response_data = APIResponse.error(
@@ -72,30 +69,38 @@ def google_authorize(request):
 
 
 # 3. 구글 연동 완료 (콜백)
-@api_view(['POST'])
+@api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def google_callback(request):
-    """구글 OAuth 콜백 처리"""
-    
-    serializer = GoogleCallbackSerializer(data=request.data)
-    
-    if not serializer.is_valid():
-        response_data = APIResponse.error(
-            code="INVALID_REQUEST",
-            message="잘못된 요청입니다."
+    code = request.query_params.get('code')
+    state = request.query_params.get('state')
+
+    if not code:
+        return Response(
+            APIResponse.error(code="INVALID_REQUEST", message="구글 인증 코드가 없습니다."),
+            status=status.HTTP_400_BAD_REQUEST
         )
-        return Response(response_data, status=status.HTTP_400_BAD_REQUEST)
-    
-    code = serializer.validated_data['code']
-    redirect_uri = serializer.validated_data['redirectUri']
+
+    saved_state = request.session.get('google_oauth_state')
+    if not saved_state or state != saved_state:
+        return Response(
+            APIResponse.error(code="INVALID_STATE", message="state 값이 일치하지 않습니다."),
+            status=status.HTTP_400_BAD_REQUEST
+        )
+
+    request.session.pop('google_oauth_state', None)
+
+    redirect_uri = os.getenv(
+        'GOOGLE_PHOTOS_REDIRECT_URI',
+        'http://localhost:8000/api/v1/photos/google/callback'
+    )
+
     user = request.user
-    
+
     try:
-        # 인증 코드를 토큰으로 교환
         token_data = GooglePhotosService.exchange_code_for_tokens(code, redirect_uri)
-        
-        # DB에 저장 또는 업데이트
-        google_cred, created = GoogleCredential.objects.update_or_create(
+
+        GoogleCredential.objects.update_or_create(
             user=user,
             defaults={
                 'google_email': token_data['google_email'],
@@ -108,21 +113,14 @@ def google_callback(request):
                 'is_active': True
             }
         )
-        
-        response_data = APIResponse.success({
-            "connected": True,
-            "googleEmail": token_data['google_email']
-        })
-        
-        return Response(response_data, status=status.HTTP_200_OK)
-    
+
+        return redirect('/gallery/')
+
     except Exception as e:
-        response_data = APIResponse.error(
-            code="GOOGLE_CALLBACK_ERROR",
-            message=f"구글 연동 실패: {str(e)}"
+        return Response(
+            APIResponse.error(code="GOOGLE_CALLBACK_ERROR", message=str(e)),
+            status=status.HTTP_500_INTERNAL_SERVER_ERROR
         )
-        
-        return Response(response_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 # 4. 구글 연동 해제
