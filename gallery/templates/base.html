@@ -6,22 +6,44 @@
     <style>
         .notification-dropdown { position: relative; display: inline-block; }
         .dropdown-content {
-            display: none; position: absolute; right: 0;
-            background-color: #f9f9f9; min-width: 250px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1;
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
         }
         .notification-dropdown:hover .dropdown-content { display: block; }
     </style>
 </head>
 <body>
     {% load socialaccount %}
+    {% load static %}
 
-    <header style="background: #eee; padding: 10px; display: flex; justify-content: space-between;">
-        <h1><a href="/">Re:Capture</a></h1>
-        <nav>
+    <header style="background:#eee; padding:10px; display:flex; justify-content:space-between; align-items:center;">
+        <h1><a href="/gallery/">Re:Capture</a></h1>
+
+        <nav style="display:flex; gap:12px; align-items:center;">
             {% if user.is_authenticated %}
                 <span>{{ user.username }}님 환영합니다!</span>
-                <a href="{% url 'accounts:mypage' %}" style="margin-left: 15px;">마이페이지</a>
+
+                <a href="{% url 'photos:google-authorize' %}"
+                   style="padding:6px 10px; background:#fff; border:1px solid #ccc; border-radius:6px;">
+                    구글 포토 연결
+                </a>
+
+                <a href="{% url 'photos:google-authorize' %}">
+                    구글 포토 불러오기
+                </a>
+
+                <form action="{% url 'photos:upload-photos' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="file" name="files" multiple accept="image/*" required>
+                    <button type="submit">사진 업로드</button>
+                </form>
+
+                <a href="{% url 'accounts:mypage' %}">마이페이지</a>
             {% else %}
                 <a href="{% provider_login_url 'google' process='login' %}">구글 로그인</a>
             {% endif %}
@@ -43,8 +65,7 @@
     </header>
 
     <main>
-        {% block content %}
-        {% endblock %}
+        {% block content %}{% endblock %}
     </main>
 </body>
 </html>

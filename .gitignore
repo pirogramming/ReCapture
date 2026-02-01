@@ -21,7 +21,6 @@ static/
 # 보안 및 환경 설정 파일 (추가)
 .env
 .env.example
-credentials.json
 
 # OS
 .DS_Store
