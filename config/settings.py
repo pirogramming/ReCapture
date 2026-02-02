@@ -42,19 +42,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
-    # allauth (social login)
     'django.contrib.sites',
+
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
-
-    # DRF
+    # Third party apps
     'rest_framework',
     'rest_framework.authtoken',
-
-    # Local apps
     'accounts',
     'photos',
     'classification',

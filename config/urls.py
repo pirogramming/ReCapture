@@ -19,17 +19,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-    # auth
+    path('api/v1/photos/', include('photos.urls')),
     path('accounts/', include('accounts.urls')),
     path('accounts/', include('allauth.urls')),
-
-    # apps
     path('gallery/', include('gallery.urls')),
-    path('api/v1/photos/', include('photos.urls')),
 ]
 
 if settings.DEBUG:
