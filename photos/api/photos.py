@@ -7,7 +7,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.pagination import PageNumberPagination
 
-from photos.models import Photo
+# from photos.models import Photo
+from gallery.models import Photo
 from photos.serializers.response import APIResponse
 from photos.serializers.photo import PhotoSerializer, PhotoUpdateSerializer
 

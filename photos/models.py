@@ -1,68 +1,69 @@
 # photos/models.py
 from django.db import models
 from django.contrib.auth.models import User
+from gallery.models import Photo as GalleryPhoto
 
-class Photo(models.Model):
-    """사진 정보"""
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='photos')
+# class Photo(models.Model):
+#     """사진 정보"""
+#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='photos')
     
-    # 파일 정보
-    filename = models.CharField(max_length=255)
-    url = models.TextField()
-    thumb_url = models.TextField()
-    file_size = models.BigIntegerField(null=True, blank=True)
+#     # 파일 정보
+#     filename = models.CharField(max_length=255)
+#     url = models.TextField()
+#     thumb_url = models.TextField()
+#     file_size = models.BigIntegerField(null=True, blank=True)
     
-    # 해시 (중복 제거용)
-    file_hash = models.CharField(max_length=64, db_index=True)
-    phash = models.CharField(max_length=16, db_index=True)
-    dhash = models.CharField(max_length=16, db_index=True)
-    ahash = models.CharField(max_length=16, null=True, blank=True)
+#     # 해시 (중복 제거용)
+#     file_hash = models.CharField(max_length=64, db_index=True)
+#     phash = models.CharField(max_length=16, db_index=True)
+#     dhash = models.CharField(max_length=16, db_index=True)
+#     ahash = models.CharField(max_length=16, null=True, blank=True)
     
-    # 분류 정보
-    category = models.CharField(max_length=50, null=True, blank=True)
-    sub_category = models.CharField(max_length=100, null=True, blank=True)
+#     # 분류 정보
+#     category = models.CharField(max_length=50, null=True, blank=True)
+#     sub_category = models.CharField(max_length=100, null=True, blank=True)
     
-    # 메타데이터
-    SOURCE_CHOICES = [
-        ('UPLOAD', 'Upload'),
-        ('GOOGLE', 'Google'),
-    ]
-    source = models.CharField(max_length=20, choices=SOURCE_CHOICES)
-    google_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
+#     # 메타데이터
+#     SOURCE_CHOICES = [
+#         ('UPLOAD', 'Upload'),
+#         ('GOOGLE', 'Google'),
+#     ]
+#     source = models.CharField(max_length=20, choices=SOURCE_CHOICES)
+#     google_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
     
-    memo = models.TextField(null=True, blank=True)
-    width = models.IntegerField(null=True, blank=True)
-    height = models.IntegerField(null=True, blank=True)
-    taken_at = models.DateTimeField(null=True, blank=True)
+#     memo = models.TextField(null=True, blank=True)
+#     width = models.IntegerField(null=True, blank=True)
+#     height = models.IntegerField(null=True, blank=True)
+#     taken_at = models.DateTimeField(null=True, blank=True)
     
-    # Exact duplicate 관계 저장
-    duplicate_of = models.ForeignKey(
-        "self",
-        null=True,
-        blank=True,
-        on_delete=models.SET_NULL,
-        related_name="duplicates",
-        help_text="Exact duplicate인 경우, 원본 Photo",
-    )
+#     # Exact duplicate 관계 저장
+#     duplicate_of = models.ForeignKey(
+#         "self",
+#         null=True,
+#         blank=True,
+#         on_delete=models.SET_NULL,
+#         related_name="duplicates",
+#         help_text="Exact duplicate인 경우, 원본 Photo",
+#     )
     
-    # Soft delete
-    is_deleted = models.BooleanField(default=False)
-    deleted_at = models.DateTimeField(null=True, blank=True)
+#     # Soft delete
+#     is_deleted = models.BooleanField(default=False)
+#     deleted_at = models.DateTimeField(null=True, blank=True)
     
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
     
-    class Meta:
-        db_table = 'photos'
-        ordering = ['-created_at']
-        unique_together = [['user', 'file_hash']]
-        indexes = [
-            models.Index(fields=['user', 'is_deleted']),
-            models.Index(fields=['category']),
-        ]
+#     class Meta:
+#         db_table = 'photos'
+#         ordering = ['-created_at']
+#         unique_together = [['user', 'file_hash']]
+#         indexes = [
+#             models.Index(fields=['user', 'is_deleted']),
+#             models.Index(fields=['category']),
+#         ]
     
-    def __str__(self):
-        return f"{self.filename} ({self.user.username})"
+#     def __str__(self):
+#         return f"{self.filename} ({self.user.username})"
 
 
 class GoogleCredential(models.Model):

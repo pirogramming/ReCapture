@@ -1,7 +1,9 @@
 # photos/tasks/import_photos.py
 from celery import shared_task
 from django.contrib.auth.models import User
-from photos.models import GoogleCredential, ImportJob, Photo
+# from photos.models import GoogleCredential, ImportJob, Photo
+from photos.models import GoogleCredential, ImportJob
+from gallery.models import Photo
 from photos.services.google_photos_service import GooglePhotosService
 from photos.services.import_service import ImportService
 from datetime import datetime

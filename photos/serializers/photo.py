@@ -1,6 +1,7 @@
 # photos/serializers/photo.py
 from rest_framework import serializers
-from photos.models import Photo
+# from photos.models import Photo
+from gallery.models import Photo
 
 class ImportGoogleRequestSerializer(serializers.Serializer):
     """구글 Import 요청"""

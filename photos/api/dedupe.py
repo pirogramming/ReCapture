@@ -2,7 +2,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-from photos.models import Photo
+# from photos.models import Photo
+from gallery.models import Photo
 from photos.serializers.response import APIResponse
 from photos.serializers.photo import PhotoSerializer
 from photos.services.deduplication_service import DeduplicationService

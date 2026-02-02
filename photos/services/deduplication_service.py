@@ -1,5 +1,6 @@
 from typing import List, Optional
-from photos.models import Photo
+# from photos.models import Photo
+from gallery.models import Photo
 
 
 class DeduplicationService:

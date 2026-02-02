@@ -13,8 +13,8 @@ db.sqlite3
 # 미디어 및 정적 파일 폴더
 media/
 storage/
-static/
 
+# static/
 # VS Code 설정
 .vscode/
 

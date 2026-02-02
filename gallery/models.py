@@ -35,28 +35,80 @@ class Category(models.Model):
     def __str__(self):
         return f"[{self.get_category_key_display()}] {self.name}" if self.category_key else self.name
 
+# class Photo(models.Model):
+#     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='photos')
+#     image = models.ImageField(upload_to='photos/%Y/%m/%d/')
+#     image_hash = models.CharField(max_length=64, unique=True)
+#     source = models.CharField(max_length=20, choices=[('direct', 'Direct'), ('google', 'Google Drive')])
+    
+#     # 새로 정의한 Category 모델 연결
+#     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='photos')
+    
+#     # 기존 문자열 필드는 데이터 마이그레이션 후 삭제해도 무방합니다.
+#     is_confirmed = models.BooleanField(default=False)
+#     memo = models.TextField(blank=True, null=True)
+#     is_bookmarked = models.BooleanField(default=False)
+    
+#     is_trashed = models.BooleanField(default=False)
+#     trashed_at = models.DateTimeField(blank=True, null=True)
+    
+#     created_at = models.DateTimeField(auto_now_add=True)
+#     updated_at = models.DateTimeField(auto_now=True)
+
+#     def __str__(self):
+#         return f"[{self.user.username}] {self.id} ({self.category.name if self.category else '미분류'})"
+
+#     @property
+#     def expires_at(self):
+#         if self.trashed_at:
+#             return self.trashed_at + timedelta(days=30)
+#         return None
+
 class Photo(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='photos')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='gallery_photos') # 중복 방지를 위해 이름 변경
+    
+    # [파일 및 이미지 정보]
     image = models.ImageField(upload_to='photos/%Y/%m/%d/')
-    image_hash = models.CharField(max_length=64, unique=True)
-    source = models.CharField(max_length=20, choices=[('direct', 'Direct'), ('google', 'Google Drive')])
+    filename = models.CharField(max_length=255)
+    url = models.TextField(null=True, blank=True)
+    file_size = models.BigIntegerField(null=True, blank=True)
     
-    # 새로 정의한 Category 모델 연결
+    # [해시 데이터 - photos 모델에서 가져옴]
+    file_hash = models.CharField(max_length=64, db_index=True, null=True, blank=True)
+    phash = models.CharField(max_length=16, db_index=True, null=True, blank=True)
+    dhash = models.CharField(max_length=16, db_index=True, null=True, blank=True)
+    ahash = models.CharField(max_length=16, null=True, blank=True)
+    
+    # [분류 및 서비스 정보]
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, related_name='photos')
-    
-    # 기존 문자열 필드는 데이터 마이그레이션 후 삭제해도 무방합니다.
-    is_confirmed = models.BooleanField(default=False)
     memo = models.TextField(blank=True, null=True)
     is_bookmarked = models.BooleanField(default=False)
+    is_confirmed = models.BooleanField(default=False)
     
+    # [상태 정보 (휴지통 등)]
     is_trashed = models.BooleanField(default=False)
     trashed_at = models.DateTimeField(blank=True, null=True)
+    is_deleted = models.BooleanField(default=False) # Soft delete (photos 모델 호환)
+    
+    # [소스 정보]
+    SOURCE_CHOICES = [('UPLOAD', 'Upload'), ('GOOGLE', 'Google')]
+    source = models.CharField(max_length=20, choices=SOURCE_CHOICES, default='UPLOAD')
+    google_id = models.CharField(max_length=255, null=True, blank=True, unique=True)
+    
+    # [메타데이터]
+    width = models.IntegerField(null=True, blank=True)
+    height = models.IntegerField(null=True, blank=True)
+    taken_at = models.DateTimeField(null=True, blank=True)
     
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        db_table = 'combined_photos' # 테이블 이름 고정
+        ordering = ['-created_at']
+
     def __str__(self):
-        return f"[{self.user.username}] {self.id} ({self.category.name if self.category else '미분류'})"
+        return f"{self.filename} ({self.user.username})"
 
     @property
     def expires_at(self):

@@ -1,8 +1,0 @@
-name: recapture_env
-channels:
-  - defaults
-dependencies:
-  - python=3.10.16 #python 3.10의 최신 패치 버전
-  - pip
-  - pip:
-      - django==4.2.17 # 4.2 LTS 버전 고정

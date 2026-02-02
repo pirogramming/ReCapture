@@ -1,3 +1,12 @@
+Django==4.2.17
+django-allauth==65.14.0
+# python-dotenv==1.0.1
+requests==2.32.5
+# pillow==12.0.0
+PyJWT==2.10.1
+# cryptography==44.0.0
+asgiref==3.11.0
+sqlparse==0.5.5
 amqp==5.3.1
 asgiref==3.11.0
 async-timeout==5.0.1
@@ -27,7 +36,7 @@ ImageHash==4.3.2
 kombu==5.6.2
 numpy==2.2.6
 oauthlib==3.3.1
-packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049101700/work
+# packaging @ file:///C:/miniconda3/conda-bld/packaging_1761049101700/work
 pillow==12.1.0
 prompt_toolkit==3.0.52
 proto-plus==1.27.0
@@ -53,6 +62,3 @@ uritemplate==4.2.0
 urllib3==2.6.3
 vine==5.1.0
 wcwidth==0.5.2
-django-allauth==65.14.0
-PyJWT==2.10.1
-
