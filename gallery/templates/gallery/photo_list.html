@@ -4,66 +4,136 @@
 <h2>📸 나의 Re:Capture 갤러리</h2>
 
 <a href="{% url 'gallery:trash_list' %}" style="text-decoration: none; color: #666; font-size: 14px;">
-    🗑️ 휴지통 보기
+    🗑️휴지통 보기
 </a>
 
 <div class="filter-bar" style="margin-bottom: 20px; padding: 15px; background: #fdfdfd; border: 1px solid #eee; border-radius: 12px;">
-    <a href="?" class="btn {% if not current_category and not is_bookmarked %}active{% endif %}">전체</a>
-
-    {% for cat in categories %}
-        <a href="?category_id={{ cat.id }}{% if is_bookmarked %}&bookmarked=true{% endif %}" 
-           style="margin-left: 10px; {% if current_category == cat.id %}font-weight: bold; color: #007bff;{% endif %}">
-           {{ cat.name }}
-        </a>
-    {% endfor %}
-
-    <span style="margin: 0 15px; color: #ccc;">|</span>
-
-    {% if is_bookmarked %}
-        <a href="?{% if current_category %}category_id={{ current_category }}{% endif %}" style="color: orange; font-weight: bold;">
-            ⭐ 북마크만 보기 (ON)
-        </a>
-    {% else %}
-        <a href="?bookmarked=true{% if current_category %}&category_id={{ current_category }}{% endif %}" style="color: #666;">
-            ☆ 북마크만 보기 (OFF)
-        </a>
-    {% endif %}
+    <a href="?" class="btn {% if not current_category %}active{% endif %}" style="margin-right: 10px; padding: 8px 15px; border: 1px solid #ddd; border-radius: 5px; text-decoration: none;">전체</a>
+    
+    <a href="?category=unclassified" class="btn {% if current_category == 'unclassified' %}active{% endif %}" 
+       style="margin-right: 10px; padding: 8px 15px; border: 1px solid #ff9800; background: {% if current_category == 'unclassified' %}#ff9800; color: white;{% else %}white; color: #ff9800;{% endif %}; border-radius: 5px; text-decoration: none;">
+       📂 분류 전 ({{ unclassified_count }})
+    </a>
+    
+    <a href="?category=finance" class="btn {% if current_category == 'finance' %}active{% endif %}" 
+       style="margin-right: 10px; padding: 8px 15px; border: 1px solid #4caf50; background: {% if current_category == 'finance' %}#4caf50; color: white;{% else %}white; color: #4caf50;{% endif %}; border-radius: 5px; text-decoration: none;">
+       💰 금융/영수증 ({{ category_counts.finance }})
+    </a>
+    
+    <a href="?category=study_note" class="btn {% if current_category == 'study_note' %}active{% endif %}" 
+       style="margin-right: 10px; padding: 8px 15px; border: 1px solid #2196f3; background: {% if current_category == 'study_note' %}#2196f3; color: white;{% else %}white; color: #2196f3;{% endif %}; border-radius: 5px; text-decoration: none;">
+       📚 학습/노트 ({{ category_counts.study_note }})
+    </a>
+    
+    <a href="?category=info" class="btn {% if current_category == 'info' %}active{% endif %}" 
+       style="margin-right: 10px; padding: 8px 15px; border: 1px solid #9c27b0; background: {% if current_category == 'info' %}#9c27b0; color: white;{% else %}white; color: #9c27b0;{% endif %}; border-radius: 5px; text-decoration: none;">
+       📄 정보글 ({{ category_counts.info }})
+    </a>
+    
+    <a href="?category=others" class="btn {% if current_category == 'others' %}active{% endif %}" 
+       style="margin-right: 10px; padding: 8px 15px; border: 1px solid #9e9e9e; background: {% if current_category == 'others' %}#9e9e9e; color: white;{% else %}white; color: #9e9e9e;{% endif %}; border-radius: 5px; text-decoration: none;">
+       🗂️ 기타 ({{ category_counts.others }})
+    </a>
 </div>
 
-{% if current_category %}
-<div class="sub-filter-bar" ...>
-    <strong>📁 세부 폴더:</strong>
-    <a href="?category_id={{ current_category }}{% if is_bookmarked %}&bookmarked=true{% endif %}" 
-       style="margin-left: 10px; text-decoration: none; {% if not current_sub_category %}font-weight: bold; color: black;{% else %}color: #666;{% endif %}">
-       전체
-    </a>
-
-    {% for sub in sub_categories %}
-        <a href="?category_id={{ current_category }}&sub_category_id={{ sub.id }}{% if is_bookmarked %}&bookmarked=true{% endif %}" 
-           style="margin-left: 10px; text-decoration: none; {% if current_sub_category == sub.id %}font-weight: bold; color: #007bff;{% else %}color: #666;{% endif %}">
-           #{{ sub.name }}
-        </a>
-    {% endfor %}
-    <button onclick="createSubCategory({{ current_category }}, '{{ csrf_token }}')" 
-            style="margin-left: 20px; border: 1px dashed #007bff; background: white; color: #007bff; cursor: pointer; border-radius: 4px;">
-        + 폴더 추가
+<!-- 분류 전 카테고리에서만 분류하기 버튼 표시 -->
+{% if current_category == 'unclassified' and unclassified_count > 0 %}
+<div style="margin-bottom: 20px; padding: 15px; background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px;">
+    <button id="classifyBtn" onclick="classifyPhotos()" 
+            style="padding: 12px 30px; background: #ff9800; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold;">
+        🤖 자동 분류하기
     </button>
+    <span style="margin-left: 15px; color: #856404;">{{ unclassified_count }}개의 사진을 자동으로 분류합니다</span>
 </div>
 {% endif %}
 
+
 <div class="gallery-grid" style="display: flex; flex-wrap: wrap; gap: 15px;">
     {% for photo in photos %}
-        <div class="photo-card" style="border: 1px solid #ddd; padding: 10px; width: 170px;">
+        <div class="photo-card" style="border: 1px solid #ddd; padding: 10px; width: 170px; border-radius: 8px;">
             <a href="{% url 'gallery:photo_detail' photo.id %}">
-                <img src="{{ photo.image.url }}" style="width: 150px; height: 150px; object-fit: cover;">
+                <img src="{{ photo.thumb_url }}" style="width: 150px; height: 150px; object-fit: cover; border-radius: 4px;">
             </a>
-            <p><strong>{{ photo.category.name|default:"미분류" }}</strong></p>
-            {% if photo.is_bookmarked %}<span>⭐</span>{% endif %}
+            <p style="margin-top: 8px; font-size: 12px; color: #666; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">{{ photo.filename }}</p>
+            <p style="margin-top: 4px;">
+                {% if photo.category == 'finance' %}
+                    <span style="background: #4caf50; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px;">💰 금융</span>
+                {% elif photo.category == 'study_note' %}
+                    <span style="background: #2196f3; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px;">📚 학습</span>
+                {% elif photo.category == 'info' %}
+                    <span style="background: #9c27b0; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px;">📄 정보</span>
+                {% elif photo.category == 'others' %}
+                    <span style="background: #9e9e9e; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px;">🗂️ 기타</span>
+                {% else %}
+                    <span style="background: #ff9800; color: white; padding: 3px 8px; border-radius: 3px; font-size: 11px;">📂 미분류</span>
+                {% endif %}
+            </p>
         </div>
     {% empty %}
         <p>조건에 맞는 사진이 없습니다.</p>
     {% endfor %}
 </div>
 
-<script src="{% static 'gallery/js/photo_list.js' %}"></script>
+<script>
+// CSRF 토큰 가져오기 함수
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+function classifyPhotos() {
+    const btn = document.getElementById('classifyBtn');
+    btn.disabled = true;
+    btn.textContent = '⏳ 분류 중...';
+    btn.style.background = '#ccc';
+    
+    const csrftoken = getCookie('csrftoken');
+    console.log('🔑 CSRF Token:', csrftoken);
+    
+    fetch('/api/v1/photos/classify', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': csrftoken
+        },
+        credentials: 'include',
+        body: JSON.stringify({})
+    })
+    .then(response => {
+        console.log('📡 Response status:', response.status);
+        return response.json();
+    })
+    .then(data => {
+        console.log('📦 Response data:', data);
+        if (data.success) {
+            alert(`✅ 분류 완료!\n\n성공: ${data.data.classified}개\n실패: ${data.data.failed}개`);
+            // 페이지 새로고침하여 결과 반영
+            location.reload();
+        } else {
+            alert('❌ 분류 실패: ' + (data.message || '알 수 없는 오류'));
+            btn.disabled = false;
+            btn.textContent = '🤖 자동 분류하기';
+            btn.style.background = '#ff9800';
+        }
+    })
+    .catch(error => {
+        console.error('❌ Error:', error);
+        alert('❌ 네트워크 오류가 발생했습니다: ' + error.message);
+        btn.disabled = false;
+        btn.textContent = '🤖 자동 분류하기';
+        btn.style.background = '#ff9800';
+    });
+}
+</script>
+
 {% endblock %}

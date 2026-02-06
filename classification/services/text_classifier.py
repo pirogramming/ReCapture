@@ -16,14 +16,18 @@ class TextClassifier:
         # ---------------------------------------------------------
         # 1. 모델 경로 설정 (train_text.py에서 저장한 경로)
         # ---------------------------------------------------------
-        # 만약 경로가 다르면 여기를 수정하세요!
-        self.model_path = 'models/text_model_v1' 
+        # 프로젝트 루트 기준 경로
+        self.model_path = 'classification/models/text_model_v1'
         
         if not os.path.exists(self.model_path):
-            raise FileNotFoundError(
-                f"❌ 모델 폴더가 없습니다: {self.model_path}\n"
-                f"먼저 training/train_text.py를 실행해서 모델을 학습시켜주세요!"
-            )
+            # classification 디렉토리 내부에서 실행되는 경우
+            if os.path.exists('models/text_model_v1'):
+                self.model_path = 'models/text_model_v1'
+            else:
+                raise FileNotFoundError(
+                    f"❌ 모델 폴더가 없습니다: {self.model_path}\n"
+                    f"먼저 training/train_text.py를 실행해서 모델을 학습시켜주세요!"
+                )
         
         # ---------------------------------------------------------
         # 2. 디바이스 설정 (GPU 있으면 자동 사용)

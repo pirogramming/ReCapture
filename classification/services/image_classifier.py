@@ -14,14 +14,13 @@ class ImageClassifier:
         # ---------------------------------------------------------
         # 1. 모델 경로 (train_image.py에서 저장한 경로와 일치해야 함)
         # ---------------------------------------------------------
-        # 만약 아까 제가 추천드린대로 'saved_models'로 바꿨다면 경로 수정하세요!
-        # 기본값: 'models/efficientnet_v1.pth'
-        model_path = 'models/efficientnet_v1.pth'
+        # 프로젝트 루트 기준 경로
+        model_path = 'classification/models/efficientnet_v1.pth'
         
         if not os.path.exists(model_path):
-            # 혹시 saved_models에 있을 수도 있으니 체크
-            if os.path.exists('saved_models/efficientnet_v1.pth'):
-                model_path = 'saved_models/efficientnet_v1.pth'
+            # classification 디렉토리 내부에서 실행되는 경우
+            if os.path.exists('models/efficientnet_v1.pth'):
+                model_path = 'models/efficientnet_v1.pth'
             else:
                 raise FileNotFoundError(
                     f"❌ 모델 파일이 없습니다: {model_path}\n"
