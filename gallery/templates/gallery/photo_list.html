@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% load static %} {% block content %}
+<h2>📸 나의 Re:Capture 갤러리</h2>
+
+<a href="{% url 'gallery:trash_list' %}" style="text-decoration: none; color: #666; font-size: 14px;">
+    🗑️ 휴지통 보기
+</a>
+
+<div class="filter-bar" style="margin-bottom: 20px; padding: 15px; background: #fdfdfd; border: 1px solid #eee; border-radius: 12px;">
+    <a href="?" class="btn {% if not current_category and not is_bookmarked %}active{% endif %}">전체</a>
+
+    {% for cat in categories %}
+        <a href="?category_id={{ cat.id }}{% if is_bookmarked %}&bookmarked=true{% endif %}" 
+           style="margin-left: 10px; {% if current_category == cat.id %}font-weight: bold; color: #007bff;{% endif %}">
+           {{ cat.name }}
+        </a>
+    {% endfor %}
+
+    <span style="margin: 0 15px; color: #ccc;">|</span>
+
+    {% if is_bookmarked %}
+        <a href="?{% if current_category %}category_id={{ current_category }}{% endif %}" style="color: orange; font-weight: bold;">
+            ⭐ 북마크만 보기 (ON)
+        </a>
+    {% else %}
+        <a href="?bookmarked=true{% if current_category %}&category_id={{ current_category }}{% endif %}" style="color: #666;">
+            ☆ 북마크만 보기 (OFF)
+        </a>
+    {% endif %}
+</div>
+
+{% if current_category %}
+<div class="sub-filter-bar" ...>
+    <strong>📁 세부 폴더:</strong>
+    <a href="?category_id={{ current_category }}{% if is_bookmarked %}&bookmarked=true{% endif %}" 
+       style="margin-left: 10px; text-decoration: none; {% if not current_sub_category %}font-weight: bold; color: black;{% else %}color: #666;{% endif %}">
+       전체
+    </a>
+
+    {% for sub in sub_categories %}
+        <a href="?category_id={{ current_category }}&sub_category_id={{ sub.id }}{% if is_bookmarked %}&bookmarked=true{% endif %}" 
+           style="margin-left: 10px; text-decoration: none; {% if current_sub_category == sub.id %}font-weight: bold; color: #007bff;{% else %}color: #666;{% endif %}">
+           #{{ sub.name }}
+        </a>
+    {% endfor %}
+    <button onclick="createSubCategory({{ current_category }}, '{{ csrf_token }}')" 
+            style="margin-left: 20px; border: 1px dashed #007bff; background: white; color: #007bff; cursor: pointer; border-radius: 4px;">
+        + 폴더 추가
+    </button>
+</div>
+{% endif %}
+
+<div class="gallery-grid" style="display: flex; flex-wrap: wrap; gap: 15px;">
+    {% for photo in photos %}
+        <div class="photo-card" style="border: 1px solid #ddd; padding: 10px; width: 170px;">
+            <a href="{% url 'gallery:photo_detail' photo.id %}">
+                <img src="{{ photo.image.url }}" style="width: 150px; height: 150px; object-fit: cover;">
+            </a>
+            <p><strong>{{ photo.category.name|default:"미분류" }}</strong></p>
+            {% if photo.is_bookmarked %}<span>⭐</span>{% endif %}
+        </div>
+    {% empty %}
+        <p>조건에 맞는 사진이 없습니다.</p>
+    {% endfor %}
+</div>
+
+<script src="{% static 'gallery/js/photo_list.js' %}"></script>
+{% endblock %}
