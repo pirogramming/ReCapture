@@ -1,0 +1,31 @@
+{
+  "full_text": "Solution\n#2. Suppose the odd prime (3,5,7,11,13, 17.... in order of increasing size are P1, P2, P3\nPiPi+1 +2 is prime, for all /≥ 1.\n...Prove or disprove:\nSolution:\nWe begin by trying a few cases. Hopefully we will either get an idea of how to prove the result, or we will find a\ncounterexample.\n3-5+2=17\n5-7+2=37\n7-11+2=79\n11-13+2=145.\nWe stop here because 145 is not prime. The number 145 is a counterexample. Therefore the original statement is false.\nProf. Eunwoo 10m (Chung-Ang University)\nCAW",
+  "lines": [
+    "Solution",
+    "# 2 . Suppose the odd prime ( 3,5,7,11,13 , 17 .... in order of increasing size are P1 , P2 , P3",
+    "PiPi + 1 +2 is prime , for all / ≥ 1 .",
+    "... Prove or disprove :",
+    "Solution :",
+    "We begin by trying a few cases . Hopefully we will either get an idea of how to prove the result , or we will find a counterexample .",
+    "3-5 + 2 = 17",
+    "5-7 + 2 = 37",
+    "7-11 + 2 = 79 11-13 + 2 = 145 .",
+    "We stop here because 145 is not prime . The number 145 is a counterexample . Therefore the original statement is false .",
+    "Prof. Eunwoo 10m ( Chung - Ang University )",
+    "CAW"
+  ],
+  "confidences": [
+    0.988243818283081,
+    0.8870264291763306,
+    0.7798440456390381,
+    0.8724335432052612,
+    0.9360126256942749,
+    0.9827437996864319,
+    0.8935751914978027,
+    0.8819611668586731,
+    0.8657010197639465,
+    0.9835329651832581,
+    0.7766355276107788,
+    0.638350248336792
+  ]
+}

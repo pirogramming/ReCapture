@@ -1,0 +1,25 @@
+{
+  "full_text": "I WANT YOU\nTO JOIN\nSPACE RANGERS\nABC\nBOUL\nROUND\nUP\nWOODY\nAndy's\nBY ANDY",
+  "lines": [
+    "I WANT YOU",
+    "TO JOIN",
+    "SPACE RANGERS",
+    "ABC",
+    "BOUL ROUND",
+    "UP",
+    "WOODY",
+    "Andy's",
+    "BY ANDY"
+  ],
+  "confidences": [
+    0.9269675016403198,
+    0.9734330177307129,
+    0.9900692701339722,
+    0.9819551706314087,
+    0.7094454169273376,
+    0.7906878590583801,
+    0.9443961381912231,
+    0.9835062026977539,
+    0.8657492995262146
+  ]
+}

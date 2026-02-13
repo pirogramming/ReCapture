@@ -1,0 +1,25 @@
+{
+  "full_text": "#2. A die is rolled six times in a row. Find\n(a) p(exactly four 1's are rolled).\n(b) p(no 6's are rolled).\nSolution\nCAL\nSolution:\n(a) This is an example of a sequence of six independent Bernoulli trials, where the probability of success is 1/6\nand the probability of failure is 5/6. Therefore the probability of rolling exactly four 1's when a die is rolled six\ntimes is (4; & }) = C(6.4) (:) * (3)² = 0.008.\n(b) In this case a success is \"rolling a number other than 6, which has probability p=5/6 and facture is \"rolling a\n6\", which has probability = 1/6. Therefore the probability of rolling no 6's when a die is rolled six umes is\n6664-0661 (3)* (÷)\" = 0.335.",
+  "lines": [
+    "# 2 . A die is rolled six times in a row . Find",
+    "( a ) p ( exactly four 1's are rolled ) . ( b ) p ( no 6's are rolled ) .",
+    "Solution",
+    "CAL",
+    "Solution :",
+    "( a ) This is an example of a sequence of six independent Bernoulli trials , where the probability of success is 1/6 and the probability of failure is 5/6 . Therefore the probability of rolling exactly four 1's when a die is rolled six",
+    "times is ( 4 ; & } ) = C ( 6.4 ) ( :) * ( 3 ) ² = 0.008 .",
+    "( b ) In this case a success is \" rolling a number other than 6 , which has probability p = 5 / 6 and facture is \" rolling a 6 \" , which has probability = 1/6 . Therefore the probability of rolling no 6's when a die is rolled six umes is",
+    "6664-0661 ( 3 ) * ( ÷ ) \" = 0.335 ."
+  ],
+  "confidences": [
+    0.9605026841163635,
+    0.9259655475616455,
+    0.9775947332382202,
+    0.6352307200431824,
+    0.9575585126876831,
+    0.9329017996788025,
+    0.691047728061676,
+    0.8720417618751526,
+    0.6070194244384766
+  ]
+}

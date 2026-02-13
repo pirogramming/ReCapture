@@ -1,0 +1,13 @@
+{
+  "full_text": "HAPPY\nYEUN\nDAY\nCakie\nakie",
+  "lines": [
+    "HAPPY YEUN DAY",
+    "Cakie",
+    "akie"
+  ],
+  "confidences": [
+    0.9309985637664795,
+    0.932902991771698,
+    0.8674675822257996
+  ]
+}

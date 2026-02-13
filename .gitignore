@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *.pyc
+*.pyo
+*.pyd
+.Python
 
 # 가상환경
 .conda/
@@ -14,6 +17,17 @@ db.sqlite3
 # 미디어 및 정적 파일 폴더
 media/
 storage/
+ENV/
+env.bak/
+venv.bak/
+
+# 데이터베이스
+db.sqlite3
+*.db
+
+# 미디어 및 정적 파일 폴더
+media/
+static/
 
 # VS Code 설정
 .vscode/
@@ -36,3 +50,37 @@ Thumbs.db
 # cookie
 cookies.txt
 cookie.txt
+.env.local
+.env.*.local
+.env.example
+
+# 보안: API 인증 정보
+classification/google_credentials.json
+**/credentials.json
+**/api_keys.json
+
+# 학습 및 테스트 데이터
+classification/train_data/
+classification/test_data/
+classification/train_text.csv
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# =========================
+# 최소 제외 (필수)
+# =========================
+
+# 1) 학습/테스트 이미지 데이터
+classification/train_data/
+classification/test_data/
+
+# 2) 비밀키/환경변수 (절대 커밋 금지)
+classification/google_credentials.json
+.env
+.env.local
+.env.*.local

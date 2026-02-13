@@ -1,0 +1,31 @@
+{
+  "full_text": "<prog>\n→ begin <stmt_list> end\n<stmt_list> <stmt>\n| <stmt>; <stmt_list>\n<stmt>\n<var> <expr>\n<var>\nA B C\n<expr>\n<var>+<var>\n| <var> - <var>\n| <var>",
+  "lines": [
+    "< prog >",
+    "→ begin < stmt_list > end",
+    "< stmt_list > < stmt >",
+    "| < stmt > ; < stmt_list >",
+    "< stmt >",
+    "< var > < expr >",
+    "< var >",
+    "A B C",
+    "< expr >",
+    "< var > + < var >",
+    "| < var > - < var >",
+    "| < var >"
+  ],
+  "confidences": [
+    0.9398432374000549,
+    0.9307332038879395,
+    0.894543468952179,
+    0.8848738670349121,
+    0.9231467843055725,
+    0.9327444434165955,
+    0.8961457014083862,
+    0.9547706246376038,
+    0.9177735447883606,
+    0.8771610856056213,
+    0.8898646831512451,
+    0.8815433382987976
+  ]
+}

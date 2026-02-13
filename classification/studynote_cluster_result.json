@@ -1,0 +1,540 @@
+{
+  "config": {
+    "ocr_cache_dir": "ocr_cache",
+    "emb_model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "min_text_len": 15,
+    "umap": {
+      "neighbors": 15,
+      "components": 10,
+      "metric": "cosine"
+    },
+    "hdbscan": {
+      "min_cluster_size": 8,
+      "min_samples": 3
+    }
+  },
+  "cluster_keywords": {
+    "0": [
+      "구하라",
+      "det",
+      "12",
+      "of",
+      "10",
+      "16"
+    ],
+    "1": [
+      "00",
+      "제출",
+      "제목",
+      "do",
+      "과제",
+      "또는"
+    ],
+    "2": [
+      "과제",
+      "단어",
+      "00",
+      "됩니다",
+      "sh",
+      "2025"
+    ],
+    "3": [
+      "선언",
+      "정보",
+      "문제",
+      "시험",
+      "함수",
+      "입력"
+    ]
+  },
+  "assignments": [
+    {
+      "photo_id": "02fd765c628536871a9fd5bc9f4e7d8a8270176c201ff32bcdd6bdecf7254ed7",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "031f40f1bcb6085e7e56e3f68d0042de401c908ab07440f82d795fded8c61aa4",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "061486117331bc3e9fe7b350a6e1a73336bf02de6adb263ee9239fb855432b1c",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "08500f72ac8d5ecfccc5d01671a130e72e7addb3be3c650fdaca78b173332253",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "0b6e652d2d9050c2c855008a97c3cb3a4ace3deb61b66aa2fb6d9db48c78e5bd",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "0bdd2802260014c54931b51d61321c7e9c5cf48d26185e57e0ad74ee56616905",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "0d4db4b36084237b9b5ee60972688899bd0939da4c75d9131cea4ea1e1a6ed93",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "0e72531d9c2ff82a6497860e30dae259187b576d3f9d005cc38c9e9b60e627c8",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "0f46652332be54549c252dbd2f882337dab83ce54d80ca1a23a0395c881ff705",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "1101ca348aaa001337c74c86e6b0565c6f877e4cdddb1eeef3f48938ad0e4b7b",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "13d3b02c34a73b828e3b4c5b5f69aa60b615dd67e7fa752e39b03252848c6742",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "1727402261452213b70f0f47002d22635a210df80e68ded387530e2e0843795b",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "1d5a91c571b71b6347f50b3801c902bdcbd0e5410771e26d431f2be5692899aa",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "1e2da7032db5605a96ff13bb5c400cd67483f2487e4b28155d985e42276135af",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "2004d21b5da5b51b04e3db1c811d8601e02679635d4977c0a50e4cc6e6d08d76",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "212b755cdf6b3f65814113cfa7fc070a0a9c3479c82bcc3c52955064164bbbb5",
+      "cluster_id": -1
+    },
+    {
+      "photo_id": "2329f8ffdfdbf3404f0c7f4e6a8e12f74ae71466b04b7158afd993c403db9ecb",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "24c5ff49c8e92b9e35aa8ec36d263a7d6d2ce4648736f9f2b1ae7f97d4f01b93",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "26bcfd6c37334cf4e484e041dcd1c53a7d42876e01bf7a7aa03fe91ce9e7ac41",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "2aea1b0fb1fd13aee96d41c63a8109338028de1532bcefdfdad4d1601c625cd7",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "33a9e7480bb9406f02656ca3e4984257caab39d58c49d6460b7d00615f0ce600",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "33cb905d4e8b290333986f1ec4c74ece5b8b9135e69c898fade208e2a39db08e",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "35a3dddad1037bf72d982430065de90092f666dbb5d920c6a17904059e15e10c",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "36aefe666d72a2a8759015fe9ca611c4aa52a4af2561ce1b1609473cb8e04859",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "37d9151ce8a8e6f927299e7cfbe31f3a82d34fd39898ebb3cfa823c33cd9e7cf",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "39da35184c010ccc28efa2df40018e021f07cb848adaf6aba2518069ade86350",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "3b14c607fc51cc0fcbdef8bffb71d9609d5c4d7ebb8752e5bc61212a969fe5df",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "3bd029645449f53bd78255cddad5feda758ca4083f9be77540cbdb3077ad6d12",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "3bfa5dffb55a6220705188cf3ecc4d4bce53df1bcb4ca1189f8799607b5558ab",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "40defdbb6cae78b7cf54f12e2fa93f648b2ab275064ff00ad235a6f9250473d6",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "46ece210fb64564b1660e68dad743b00ae6eeb416c5d2861fe44696da2dcc6d5",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "4cebeab47cf75cfd5dd7b35918f3cad7fd15d703367ea8a76ec11f4923f36493",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "4e0241c3804f0e26d7c273f220dccf82c04e050c9182f1ef05d0292d0f1b24db",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "4f20c1b8476e1c2aaff6262ce304de971bf7b7b0340c687e54c488665103c5b8",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "50ba4e61b5050359e1a4410a2c954d5029e30cdf569691488cd0832c4942947b",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "51cb47d10f2025d15b70a3ad4ad2a35fbc0e2232b653ed26628bef1d7414aa7b",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "53977a507b377c1737953a901e748ba8b5131687cd35a3d8b7a5da1831b43e97",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "5525ce0173e85f8caeccab71fd0a679f070e68ac0a31df8d502a541a018cdbbf",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "5559fe00e1d45ce7e6340b2ffbe05f0b2334780156575a402b9742413c601fe5",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "55b18e2e74cfc8a2e4ea3f2f7180dc9be9c999da0a1644f949ec77d56cb4e650",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "58e01a6e2edf786c41f74f6f0e2f5715f008d0201a4b5d51d261e3947e6e4299",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "5c3c07fa5e7775b8725f65ef8946cc262b61d9f87d4d0a0d9c322ab9cd21e6b0",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "5fb13663b138975886f647ca5b2bac093cb1b92fd2592acb459bb38c740cc080",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "61b32cf8387719a1d5f87153e95b6eac05b4b5cf07d2adf21d6049e2ea98c373",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "63f28bc233f9c0ddf804af6bfd711c410dab33f100038e6d06c39a153b55f601",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "646f62d872ef2f0efd76a63d5ab5a9da43177e428ab54baf62c530f72cccffd9",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "64fffe143580a256a47d3db529592d76cfe00bfdc61e497ad3079db4ec425016",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "6512e45baa910c2f5f88d0809a801f41a28a6e22440a44b211ba125cd21f35b0",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "6578586520afeba44ab36b4027aedd026c9a5f22246ab28e6dbd67f4aba0f5ab",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "65cb14a50b517c42e3d444d5856c0cbba110839992bc7413c1dea46b6f09c316",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "66acaf1f8fd30217df479f991a8c4fb2bff86572bf8b88c6893b8c2ac8d17a8a",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "67e1b3b93939bce628071f83a2bda6df9e644333d30ede1e32719819a8efc198",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "6925a3c8349574978e8b16c16c5ac76eb0498e1e9778e08e7b68e462ad220901",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "6b40e179ee59502abfcb0907d317e0018e3a08e4d01061fac27158577907bcd8",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "71f060d6cfbc002fd3e19bcf277608ea3e03cce75fb541bcc0c26df02f7f8edb",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "7377f9a423d471f97e2acf1609734cbf2c0502afecb3ccdfcb0e8ecaa7be304c",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "745a30a17b51f27caa9c06e2177d4c2c1aad7b4b1e5f6c41ee2bd3acec80d047",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "747fd0f0eaabe0ff51666f86e39a941b6c96f707f32fc629ac4fb49b88638218",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "74e2e3cf7c3e362c3a95c9c2bd9f2668f2f0aa22cca1e15bbd7190419dd192a5",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "7968886e9b962050b06497bb3cbebd1722db044e5e3e9149eebc65edf952c83e",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "7b6cacc51c9ba1621bd1426ed65bbcd220e90a612505bb55aeb5f76f7a7cddbd",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "7bf42f56eeffd0313e4a86bb38df5d4805250354ba0b58513bc3bab27d3c5338",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "7c0ad825582ba17d1a9f53091d8902315e455d1dc7f2f231b8c6354c448c2aaf",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "7f69003e53e5b9ea18097c363d6f33574251465e0d806f347ffc9cb2f9c3c76d",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "827c55c93d695a1b8dcee87954160d53b219aab9a6a306da41cd3e43ae7b38d5",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "83d419699a42261deba4abbb108ee907fe4e77afaaa84191363b0f89583b3f59",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "851068ec676b9b4b1ccae64e85f3455f9cc974cddd6bcf675b69830444eac0ad",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "888517607e8418e72866617e8653563a0baa7529e244735a07ad63d541798a40",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "8a7c55987e89c73f4f446419de1ce7e62d5009efb29f9ee49efbc715913718aa",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "8eb1fd075b1420224b0fabea086528686c820e78943d648455b09c68a42b76cc",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "8ef825f8519c192bd267fd3991427040e0adfff6d4cf782eae0d71d387d6d995",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "8f46a3610aacaeb19de426d99cd20c44616fdf57a541e2bc0106dcde18b13156",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "90d4efdb8f080c542aac09c890b4f385c0e91884015b21153492262ea067ae17",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "92d4d5c5d3e3abfb53d8da809bd7f55f41d54f8c0da429f8896da4ae18ae348a",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "964563b4fbfa5bb61c1c5c98d3eb67d2d0c8902f20ca4936187cc74317d7606b",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "9ea4463c70445d69684ca08013a423ae03e3679ba87190ff226b5447fcd6d150",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "9f08bd930f470a505b92e3051336e486caf94ee2814e7cab47c9267508069f80",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "a0ce6850dfc0933e3cbbc476fd2ba3babd0b9a269769801d10faa3c2e9e829e3",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "a292862c4f5b77a49760624d1bd7b704e32ac9208f6779b301ed25f165e316db",
+      "cluster_id": -1
+    },
+    {
+      "photo_id": "a3c347746f7f9dedcf3143c351672bfd025ca947a2a0b4f50d70a088263a8780",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "a5d05e615578d5dbe588c59320531bb2d297a3a9597de82ac12635de2648c079",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "a81e9e489149c686f34d246044c2f08e4a3e2b872bd0c197be1732fa9992ca57",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "a9781425aa55a870088fd8c693714cd46ee1808955bdea3abfc20df5f670eaa9",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "ab8b8a67bc80fbaa6b3316bbf9ccbdaf306f5b34cf6794c620a6e0e1ab03b6f6",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "b17231f37b0f834042e1bf1fe76a20465ac1f28c856bb49344a7ec2c2137d10b",
+      "cluster_id": -1
+    },
+    {
+      "photo_id": "b37005f51ef2f6aff7c532b8da52bafdc7ebf5c03820448312c412e504afba9a",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "b49935ae1788f4b6fb768594ed0410b61ab83cb8fac47677ba83612b1c471afe",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "b76b97779a9c088f39840afbaeff9eab065780d499c3d118b8d8e29db5187683",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "b82fa9cadc5ab5ddb07085af75f2c985c1d7edd8ef7994008894bcf89aaaf29f",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "b952c1b5ca0f042748137e4338aeea31300f9ef385c21cec77b9d77941d1461e",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "ba73ec6c16d1bb40c4ecb86bdd153de93654ad162caaacaa6bb2bc273f7dab92",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "bd3725df9954f62d0d931d5719db8f96663aeaed0d3f414355cb0f5cb59a448b",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "c01fa263bda3f0dad00eb1ad0e989c05ec856fa340c6703d87a8aab6a1b95a7b",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "c20ceb5636b83d29f7e0381bd7d6233b2c64cc7ce9f5417c63528735ad67e8cf",
+      "cluster_id": -1
+    },
+    {
+      "photo_id": "cb87fb12d3138c5f06965e8e0b76f7279c91fbe05943e2a6adf505fd36c5568a",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "cca27b5ffed97e8bb8e72af943c27677fc2319d075de83852a7f2f241ae1c8a4",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "d01a04f39aed31b03d6331f46026df6c896a960abf4a3f78258e489c3087bafc",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "d154167796bf4c0c20200fc86a932bd5192653f993032527fbe605999e64c5a4",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "d7f42d7e46738dbce9bb6c5da9598ba02f038048bcd66a7fd225ee03ed761ba4",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "d828a960f7a9648c31cb761c3cef7148a01249bd997f92714b2c2e7407f88a37",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "da783eae8cdff0e6cc0aae0c94eced910dbf55209b6b997222e9d89ff0f512b2",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "dae3e6927a7a8eb25e556d222b9047d6222fb88a2152bd9917b2b85b2be3df00",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "dca3677d30da473a4c13454ad8d1f9e6d3cb86c169a48206108584d1b6341423",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "dd9b6f724818f070ab07135b616caad158a7063160db31c2160ffafe79bbd870",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "dfbdcaa001b95a987075c469848bcc3653be46a7879e07e33e826ad09e3e1ceb",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "dff8c76a42b269cce409803e409e7d7ce3b83cccc480b48706f096e9ecf9a45d",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "e0069a1201f85c2593b299d1a19e57549b0c64cae90439208693b8b8d88a7a1f",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "e4288601e1c2fd47346d8ecd721353cadaea654f681990c14d758c8dd35190d0",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "e4b143403b4ad4b14298bb85f1524d8144df7917c2bc0087c5e8756bb30c7352",
+      "cluster_id": 1
+    },
+    {
+      "photo_id": "e4b3de4e945485636f8066f176d164503632d01a2ff8c5c2cdafbca687a0f3bc",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "e529407223e40eb9114a5610d30f266fcdbf9b860f89cf47d4f45fbf6c5e6e57",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "e54c8294c766f3829555cb37ee4f20fada9223937ced34f639516737408d0471",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "eae61814b69524b6e1c681748cd45c460541f9374f4f9feb2995fa48bf152ac0",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "eb3be98546b28998a8c7ff98b5295ffd9fd495fe66cb973e6729cca9df6b39d5",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "eb455f5851daae2ba28f608ddedb3fd1f027133c502671e5d74aab58c8e97638",
+      "cluster_id": -1
+    },
+    {
+      "photo_id": "eda626aa8818c4cda92afe3cd7899cb3d916c6f10ebcbd4c379f97fe8a42fb02",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "ee23c2b191a2c50f89f2056c737c7de7b20fe296edc9ea1b17731836db1a461a",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "ef7baae52fc85aa8fb50cfe7251f6d10e467b60b96e2d0755db77afd62e33d1a",
+      "cluster_id": 2
+    },
+    {
+      "photo_id": "f15637f2c5e881c2537659ef09052eeb858195b9fdaf438b3aba5fdd87e9f4cf",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "f1d3a530408674f4f31d606aa833a67a262c8d0b99282b59e6fc21094a266b59",
+      "cluster_id": 3
+    },
+    {
+      "photo_id": "f1f6318afa8b454275b2834826fd07df7b18005be577122f644527dfa00a0dcf",
+      "cluster_id": 0
+    },
+    {
+      "photo_id": "f4f95d9fb22c1f37746f9463bc33271cef2a6d284dab80167dccdb9fe2f5dfb5",
+      "cluster_id": 0
+    }
+  ]
+}

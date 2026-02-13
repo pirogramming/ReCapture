@@ -1,0 +1,43 @@
+{
+  "full_text": "Jetstar\nJetstar\nFlight: J054\nSeat: 480\nDate: 01JUN24\nFLT3054\nDesti\nSeat: 449 Seq: 0241\nBoarding! Gate\n21:10\nFare:\nSeg\nSTARTER CL DYZM $245\nDate: 01JUN24\nSEOUL (INCHEON)\nCustomer Copy\nOh420\nBoarding P\nhttps://blog.naver.com/loveori1",
+  "lines": [
+    "Jetstar",
+    "Jetstar",
+    "Flight : J054",
+    "Seat : 480",
+    "Date : 01JUN24",
+    "FLT3054",
+    "Desti",
+    "Seat : 449 Seq : 0241",
+    "Boarding ! Gate 21:10",
+    "Fare :",
+    "Seg",
+    "STARTER CL DYZM $ 245",
+    "Date : 01JUN24",
+    "SEOUL ( INCHEON )",
+    "Customer Copy",
+    "Oh420",
+    "Boarding P",
+    "https://blog.naver.com/loveori1"
+  ],
+  "confidences": [
+    0.9637513756752014,
+    0.9789080023765564,
+    0.7756550312042236,
+    0.7687470316886902,
+    0.9046609401702881,
+    0.6412829160690308,
+    0.7457805275917053,
+    0.6710165143013,
+    0.7384461760520935,
+    0.6314399838447571,
+    0.6357948780059814,
+    0.7224469780921936,
+    0.8403382897377014,
+    0.6581500172615051,
+    0.895764172077179,
+    0.44924578070640564,
+    0.6000966429710388,
+    0.9759521484375
+  ]
+}

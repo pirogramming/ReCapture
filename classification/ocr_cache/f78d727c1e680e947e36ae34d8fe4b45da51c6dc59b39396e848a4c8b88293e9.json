@@ -1,0 +1,27 @@
+{
+  "full_text": "bee\nYum\nHolly\ncrispy\nFries\nspy\nFries\n1 REG FFRE\n1 REG COKE P\n1 WM DBL YC *P\n1 DBL CHZY YU\n1 REG FFRIES PO\n1 REG COKE ZEFO\n11 Item(s)\nTOTAL DUE\nCASH\nCHANGE\nLAT-Exemp\nWATable Sale",
+  "lines": [
+    "bee",
+    "Yum",
+    "Holly crispy Fries",
+    "spy",
+    "Fries",
+    "1 REG FFRE 1 REG COKE P 1 WM DBL YC * P 1 DBL CHZY YU 1 REG FFRIES PO 1 REG COKE ZEFO",
+    "11 Item ( s )",
+    "TOTAL DUE",
+    "CASH CHANGE",
+    "LAT - Exemp WATable Sale"
+  ],
+  "confidences": [
+    0.7518225908279419,
+    0.8541778326034546,
+    0.9274899959564209,
+    0.7986848950386047,
+    0.9461835622787476,
+    0.8181701302528381,
+    0.9679363965988159,
+    0.9887557029724121,
+    0.9848406910896301,
+    0.6882648468017578
+  ]
+}

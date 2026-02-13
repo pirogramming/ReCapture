@@ -1,0 +1,29 @@
+{
+  "full_text": "module module_name (port_list::_-_-\nport 선언\nreg 선언\nwire 선언\nsemicolon\n모듈정의\nparameter 선언\n하위모듈 호출\nalways, initial\nfunction, task\nassign 문\nfunction, task\nendmodule\n모듈 items\nno semicolon",
+  "lines": [
+    "module module_name ( port_list :: _ - _-",
+    "port 선언",
+    "reg 선언",
+    "wire 선언",
+    "semicolon",
+    "모듈 정의",
+    "parameter 선언",
+    "하위 모듈 호출 always , initial function , task assign 문 function , task",
+    "endmodule",
+    "모듈 items",
+    "no semicolon"
+  ],
+  "confidences": [
+    0.7509117126464844,
+    0.9809097051620483,
+    0.9890587329864502,
+    0.9930580854415894,
+    0.9919413328170776,
+    0.9858113527297974,
+    0.9964459538459778,
+    0.9840587973594666,
+    0.9487291574478149,
+    0.9940023422241211,
+    0.9906942844390869
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "full_text": "#1. Find the prime factorization of:\n(a) 487.\n(b) 6600.\nSolution\nSolution:\n(a) If we try to divide 487 by all primes from 2 to 1√487] = 22 (that is, 2, 3, 5, 7. 11. 13, 17, 19), we find that none\nof these divides 487 without a remainder. Therefore 487 is prime.\n(b) Begin by writing 6600 as any product of smaller positive factors, such as 660066 100. We continue this\nprocess until only primes are obtained:\n6600 = 66-100\n-(6-11X10-10)\n=(2-3-11)-(2-5-2-5)\n=2³-3-52-11.\nIf we initially factor 6600 in a different way, such as 6-1100, we would still arrive at the same product of prime\nfactors.\nProf. Eunwoo Kim (Chung Ang University)\n64\nCAW",
+  "lines": [
+    "# 1 . Find the prime factorization of :",
+    "( a ) 487 . ( b ) 6600 .",
+    "Solution",
+    "Solution :",
+    "( a ) If we try to divide 487 by all primes from 2 to 1√487 ] = 22 ( that is , 2 , 3 , 5 , 7. 11. 13 , 17 , 19 ) , we find that none of these divides 487 without a remainder . Therefore 487 is prime . ( b ) Begin by writing 6600 as any product of smaller positive factors , such as 660066 100. We continue this process until only primes are obtained :",
+    "6600 = 66-100",
+    "- ( 6-11X10-10 )",
+    "= ( 2-3-11 ) - ( 2-5-2-5 ) = 2³ - 3-52-11 .",
+    "If we initially factor 6600 in a different way , such as 6-1100 , we would still arrive at the same product of prime factors .",
+    "Prof. Eunwoo Kim ( Chung Ang University )",
+    "64",
+    "CAW"
+  ],
+  "confidences": [
+    0.9657032489776611,
+    0.9692533612251282,
+    0.9800099730491638,
+    0.88148432970047,
+    0.9639847874641418,
+    0.9082422256469727,
+    0.8121001720428467,
+    0.7395185828208923,
+    0.9587823152542114,
+    0.8252428770065308,
+    0.975589394569397,
+    0.7285141348838806
+  ]
+}

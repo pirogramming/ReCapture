@@ -1,0 +1,39 @@
+{
+  "full_text": "Indexing Files\nExample: B+ Tree\nNumber of tree pointers of each node (except root is from o\nNumber of search key values of each node (except root) is from 2 to 4.\nNumber of pointers of root node is from 2 to 5\nIs this tree balanced? Wes\n6 14\nmot\n18\nnode\nintern\nhole\n2535\n(2\nPESCUE C7482023-252831644482\nB+ Tree fanoutip) height 3, and 17 search field values\n(Depointe들은 모두 leaf node들에 존재함.)\nat min\n• Leaf node들은 pointer)로 서로 연결되어 있음. range search",
+  "lines": [
+    "Indexing Files",
+    "Example : B + Tree",
+    "Number of tree pointers of each node ( except root is from o Number of search key values of each node ( except root ) is from 2 to 4 . Number of pointers of root node is from 2 to 5",
+    "Is this tree balanced ? Wes",
+    "6 14",
+    "mot",
+    "18",
+    "node",
+    "intern",
+    "hole",
+    "2535",
+    "( 2",
+    "PESCUE C7482023-252831644482 B + Tree fanoutip ) height 3 , and 17 search field values",
+    "( Depointe 들은 모두 leaf node 들 에 존재 함 . )",
+    "at min",
+    "• Leaf node 들은 pointer ) 로 서로 연결 되어 있음 . range search"
+  ],
+  "confidences": [
+    0.6031937599182129,
+    0.9471812844276428,
+    0.9369666576385498,
+    0.9071888327598572,
+    0.9551559686660767,
+    0.5858442783355713,
+    0.9251741170883179,
+    0.4516608715057373,
+    0.4666968882083893,
+    0.5060475468635559,
+    0.9011908173561096,
+    0.4110007882118225,
+    0.7684046626091003,
+    0.808832049369812,
+    0.41504529118537903,
+    0.8054656982421875
+  ]
+}

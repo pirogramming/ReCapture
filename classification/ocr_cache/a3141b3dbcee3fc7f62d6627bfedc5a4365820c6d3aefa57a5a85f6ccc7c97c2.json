@@ -1,0 +1,23 @@
+{
+  "full_text": "20. After Efects 후보정 2편: 외국 플러그인\nOWN CHON ONE OWP CON OR OW\n부포트에서 선택한 오브젝트를 클릭후 오브젝트 저널에 마우스 커서를 올리고 를 누르면\n클릭한 오브젝트를 오브젝트 패널에서 할 수 있음.\nRender settings - Dctane Ronderer - Ronder Aoy group. Render AN money\n내 beauty passes\nDiffuse, Reflection direct (빛이 직접 리플렉션에 닿았을때)\nReflection indirect (리플렉션에 닿은 빛이 산란되는 때)\nPost (흐린 필터 bloom을 뽑아냄 후보중 작업으로 처리하는 것이 좋음) fast processing\nReflection (굴절되는 스펙큘러 재결\nDenoised beauty\nOctane Render-Mail-use donoised beauty Pass\ninfo Pass는 추가하는 갯수만큼 덴어 시간 증가\nz-Depth= 거리 또는 안개 표현, Z-Depth max를 활용해 조절,\nAO: 음영 부분 표현, Ao Distance를 활용해 조절\nMaterial 10= 버텨리말에 맞추어 색을 구분함, 특정 테이블의 색만 수정가는 게함.\nImage color profile= sRGB/ Tone map Type = Tone mapped",
+  "lines": [
+    "20. After Efects 후보정 2 편 : 외국 플러그인",
+    "OWN CHON ONE OWP CON OR OW",
+    "부 포트 에서 선택한 오브젝트 를 클릭 후 오브젝트 저널 에 마우스 커서 를 올리고 를 누르면 클릭 한 오브젝트 를 오브젝트 패널 에서 할 수 있음 . Render settings - Dctane Ronderer - Ronder Aoy group . Render AN money",
+    "내 beauty passes",
+    "Diffuse , Reflection direct ( 빛 이 직접 리플렉션 에 닿았 을 때 ) Reflection indirect ( 리플렉션 에 닿은 빛 이 산란 되는 때 ) Post ( 흐린 필터 bloom 을 뽑아 냄 후보 중 작업 으로 처리 하는 것이 좋음 ) fast processing",
+    "Reflection ( 굴절 되는 스펙 큘러 재결 Denoised beauty",
+    "Octane Render - Mail - use donoised beauty Pass",
+    "info Pass 는 추가 하는 갯수 만큼 덴어 시간 증가 z - Depth = 거리 또는 안개 표현 , Z - Depth max 를 활용 해 조절 , AO : 음영 부분 표현 , Ao Distance 를 활용 해 조절 Material 10 = 버텨 리말 에 맞추어 색 을 구분 함 , 특정 테이블 의 색만 수정 가는 게함 . Image color profile = sRGB / Tone map Type = Tone mapped"
+  ],
+  "confidences": [
+    0.8009405136108398,
+    0.5190331935882568,
+    0.6867049336433411,
+    0.9101071357727051,
+    0.8296613693237305,
+    0.8899645805358887,
+    0.8634170889854431,
+    0.8413735032081604
+  ]
+}

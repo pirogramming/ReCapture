@@ -1,0 +1,29 @@
+{
+  "full_text": "Coding Camp-C\n파이 패스워드\nausw123\nClass 구조화: 어디에 실행 코드를?\nSearchFrame(PictureSearchFrame mainFrame) {\njbANDSearch.addActionListener( new ActionListener() {\npublic void actionPerformed(ActionEvent e) {\n)\n608\nif (ljtFromTime.getText().equals(\"\") && !jtToTime.getText().equals(\"\")) {\nLocalDateTime fromTime = LocalDateTime.parse(jtFromTime.getText(), TIMEFORMAT);\nLocalDateTime to Time=LocalDateTime.parse(jtToTime.getText(), TIMEFORMAT);\nPictureList slist = mainFrame.getDisplayedPictureList().selectPicturesByTimeRange(fromTime, to Time);\nmainFrame.updatePictureSection(slist);\nif (!singleStuff.getTypeText().equals(\"\")) {\nPictureList slist = mainFrame.getDisplayedPictureList().selectPicturesByStuffType(sing\nmainFrame.updatePictureSection(slist);",
+  "lines": [
+    "Coding Camp - C",
+    "파이 패스워드",
+    "ausw123",
+    "Class 구조화 : 어디에 실행 코드 를 ? SearchFrame ( PictureSearchFrame mainFrame ) {",
+    "jbANDSearch.addActionListener ( new ActionListener ( ) { public void actionPerformed ( ActionEvent e ) {",
+    ")",
+    "608",
+    "if ( ljtFromTime.getText ( ) . equals ( \" \" ) && ! jtToTime.getText ( ) . equals ( \" \" ) ) { LocalDateTime fromTime = LocalDateTime.parse ( jtFromTime.getText ( ) , TIMEFORMAT ) ; LocalDateTime to Time = LocalDateTime.parse ( jtToTime.getText ( ) , TIMEFORMAT ) ; PictureList slist = mainFrame.getDisplayedPictureList ( ) . selectPicturesByTimeRange ( fromTime , to Time ) ; mainFrame.updatePictureSection ( slist ) ;",
+    "if ( ! singleStuff.getTypeText ( ) . equals ( \" \" ) ) {",
+    "PictureList slist = mainFrame.getDisplayedPictureList ( ) . selectPicturesByStuffType ( sing",
+    "mainFrame.updatePictureSection ( slist ) ;"
+  ],
+  "confidences": [
+    0.945058286190033,
+    0.969382107257843,
+    0.9779332280158997,
+    0.9943140149116516,
+    0.9942217469215393,
+    0.5275313854217529,
+    0.4631617069244385,
+    0.9925642609596252,
+    0.9906813502311707,
+    0.991132915019989,
+    0.9936220049858093
+  ]
+}

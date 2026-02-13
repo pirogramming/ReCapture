@@ -1,0 +1,27 @@
+{
+  "full_text": "CRACKER\nGOLDEN\nBUTTER\nCRACKER\nFlasler\nO\n스피커 리시비\nD0+ Neu:X Roon\nCigloo\n셋톱박스\nCRAVETS",
+  "lines": [
+    "CRACKER",
+    "GOLDEN",
+    "BUTTER CRACKER",
+    "Flasler",
+    "O",
+    "스피커 리 시비",
+    "D0 + Neu : X Roon",
+    "Cigloo",
+    "셋톱 박스",
+    "CRAVETS"
+  ],
+  "confidences": [
+    0.8247876763343811,
+    0.957190215587616,
+    0.9904927015304565,
+    0.7508751749992371,
+    0.772337019443512,
+    0.974282443523407,
+    0.6241772174835205,
+    0.6171847581863403,
+    0.9788527488708496,
+    0.581868052482605
+  ]
+}

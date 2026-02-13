@@ -1,0 +1,15 @@
+{
+  "full_text": "1\nHERATON\nCebu Mactan Resort\nATON\nan Resort\nN",
+  "lines": [
+    "1",
+    "HERATON Cebu Mactan Resort",
+    "ATON an Resort",
+    "N"
+  ],
+  "confidences": [
+    0.8505373001098633,
+    0.9853149056434631,
+    0.9170719981193542,
+    0.9458890557289124
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "full_text": "Charlotte Theater\nem\nDisney\nAladdin\nDisney\nTHE HIT\nBROADWAY\nMUSICAL\nTHE HIT\nBROADWAY\nMercedes\nMUSICAL\nAladd",
+  "lines": [
+    "Charlotte Theater",
+    "em",
+    "Disney",
+    "Aladdin",
+    "Disney",
+    "THE HIT BROADWAY MUSICAL",
+    "THE HIT BROADWAY",
+    "Mercedes",
+    "MUSICAL",
+    "Aladd"
+  ],
+  "confidences": [
+    0.9738742113113403,
+    0.6783973574638367,
+    0.7791515588760376,
+    0.9649385809898376,
+    0.8042256236076355,
+    0.9853330254554749,
+    0.9585813283920288,
+    0.776278018951416,
+    0.9867034554481506,
+    0.8081830143928528
+  ]
+}

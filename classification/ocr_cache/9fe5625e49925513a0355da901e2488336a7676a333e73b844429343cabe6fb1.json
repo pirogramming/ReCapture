@@ -1,0 +1,31 @@
+{
+  "full_text": "PHOTOGRAY\neDbib\nPHOTOGRAY\n☆☆\n☆\nㄱ\neDbib\nPHOTOGRAY\nPHOTOGRAY\n/11\nPHOTOGRAY\nPHOTOGRAY",
+  "lines": [
+    "PHOTOGRAY",
+    "eDbib",
+    "PHOTOGRAY",
+    "☆☆",
+    "☆",
+    "ㄱ",
+    "eDbib",
+    "PHOTOGRAY",
+    "PHOTOGRAY",
+    "/ 11",
+    "PHOTOGRAY",
+    "PHOTOGRAY"
+  ],
+  "confidences": [
+    0.987878680229187,
+    0.7195101976394653,
+    0.9899532794952393,
+    0.7618569731712341,
+    0.7891097068786621,
+    0.7172009944915771,
+    0.7195101976394653,
+    0.9896023273468018,
+    0.9883872866630554,
+    0.6843182444572449,
+    0.9902780055999756,
+    0.9905658960342407
+  ]
+}

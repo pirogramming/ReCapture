@@ -1,0 +1,39 @@
+{
+  "full_text": "I\neaf Procedure Example\nExample C code:\nint leaf_example (int g, h, i, j)\nint\nint f;\nf = (g+h) - (i + j);\nreturn f;\n⚫ Arguments g, ..., j in $a0, ..., $a3\n⚫ fin $s0 (hence, need to save $s0 on stack)\nResult in $vo\n}\nleaf_example:\naddi $sp, $sp, -4\nSW $50, 0($sp)\nadd $to, $a0, $al\nadd $t1, $a2, $a3\nsub $50, $to, $t1\nadd $v0, $s0, $zero\n# Save $so on stack\n(Reserving 4 bytes in stack for storing $s0)\n# Procedure body\n(Result is saved at $s0)\n# Result (Copy to $v0)\nCAL\nWindows 정품인",
+  "lines": [
+    "I",
+    "eaf Procedure Example",
+    "Example C code :",
+    "int leaf_example ( int g , h , i , j )",
+    "int",
+    "int f ;",
+    "f = ( g + h ) - ( i + j ) ; return f ;",
+    "⚫ Arguments g , ... , j in $ a0 , ... , $ a3 ⚫ fin $ s0 ( hence , need to save $ s0 on stack ) Result in $ vo",
+    "}",
+    "leaf_example : addi $ sp , $ sp , -4 SW $ 50 , 0 ( $ sp ) add $ to , $ a0 , $ al add $ t1 , $ a2 , $ a3 sub $ 50 , $ to , $ t1 add $ v0 , $ s0 , $ zero",
+    "# Save $ so on stack",
+    "( Reserving 4 bytes in stack for storing $ s0 )",
+    "# Procedure body ( Result is saved at $ s0 )",
+    "# Result ( Copy to $ v0 )",
+    "CAL",
+    "Windows 정품 인"
+  ],
+  "confidences": [
+    0.761703610420227,
+    0.9872142672538757,
+    0.9817232489585876,
+    0.9482805728912354,
+    0.5287455916404724,
+    0.9263082146644592,
+    0.8345484733581543,
+    0.8770897388458252,
+    0.9605594873428345,
+    0.9125565886497498,
+    0.907975971698761,
+    0.9591357111930847,
+    0.9655308127403259,
+    0.9338397979736328,
+    0.7518985867500305,
+    0.768040657043457
+  ]
+}
