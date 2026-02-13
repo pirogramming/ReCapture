@@ -33,7 +33,8 @@
 .btn-camera { background-color: #007bff; }
 .btn-google { background-color: #007bff; }
 .btn-classify { 
-    background-color: #ffffff;
+    background-color: white;
+    color: #007bff;
 }
 
 .trash-link {
@@ -122,8 +123,75 @@
     border-color: #ccc;
 }
 
+/* 1. 사이드바 기본 스타일 */
+.filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px; /* 숨김 */
+    width: 280px;
+    height: 100%;
+    background: white;
+    z-index: 2000;
+    transition: 0.3s ease;
+    padding: 25px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+.filter-sidebar.active { left: 0; }
+.sidebar-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1999;
+    display: none;
+}
+.sidebar-overlay.active { display: block; }
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.sidebar-content .filter-link {
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+/* 2. 햄버거 버튼 스타일 */
+.sidebar-open-btn {
+    display: none; /* PC에서는 숨김 */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /* 반응형 (모바일) */
 @media (max-width: 768px) {
+    header {
+        height: 60px !important;
+        padding: 0 15px !important;
+        flex-direction: row !important; /* 가로 유지 */
+    }
+    
+    .sidebar-open-btn { display: block; } /* 햄버거 버튼 등장 */
+    
+    .pc-only {
+        display: none !important; /* 모바일에서 기존 필터바 숨김 */
+    }
+    
+    header h1 a { font-size: 18px !important; }
+    
+    /* 버튼들 작게 조정하여 한 줄 확보 */
+    .btn-mypage, .noti-btn, .btn-action {
+        width: 35px !important;
+        height: 35px !important;
+        padding: 0 !important;
+        font-size: 14px !important;
+    }
+
     .gallery-header {
         justify-content: center;
         gap: 10px;

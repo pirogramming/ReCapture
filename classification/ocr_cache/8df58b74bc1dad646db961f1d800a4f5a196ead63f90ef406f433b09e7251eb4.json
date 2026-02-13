@@ -1,0 +1,35 @@
+{
+  "full_text": "5.12 F1 0\nDU\nBELL & SONS\nESTABLISHED\n9281\nfore\nye go\nBELL'S\nBLENDED SCOTCH WHISKY\nAshen Ball-chens\nEST HAS\n40% vol\n323\nBlack & White\nBlended Scotch Whisky\nFROM JAMES BUCHANAN C\n20c1\n093727\nfresh",
+  "lines": [
+    "5.12 F1 0",
+    "DU",
+    "BELL & SONS",
+    "ESTABLISHED",
+    "9281",
+    "fore",
+    "ye go",
+    "BELL'S BLENDED SCOTCH WHISKY Ashen Ball - chens EST HAS",
+    "40 % vol",
+    "323",
+    "Black & White Blended Scotch Whisky FROM JAMES BUCHANAN C",
+    "20c1",
+    "093727",
+    "fresh"
+  ],
+  "confidences": [
+    0.7344183921813965,
+    0.9404099583625793,
+    0.920259952545166,
+    0.8130860328674316,
+    0.8271819353103638,
+    0.9491910338401794,
+    0.7414334416389465,
+    0.6806466579437256,
+    0.9801044464111328,
+    0.6933279633522034,
+    0.8289452195167542,
+    0.7988529205322266,
+    0.5973863005638123,
+    0.7035139799118042
+  ]
+}

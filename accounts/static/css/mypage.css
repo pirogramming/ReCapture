@@ -9,13 +9,6 @@
     text-align: center;
 }
 
-.mypage-container h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: #1a1a1a;
-    font-weight: 800;
-}
-
 /* 유저 아바타(가상) 및 이름 섹션 */
 .user-profile-header {
     margin-bottom: 30px;

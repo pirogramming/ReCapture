@@ -1,0 +1,41 @@
+{
+  "full_text": "int id;\n} Student;\nvoid Store (Student* s, char* name, int id);\n(a) {s = (char*) malloc(strlen(name)+1); strcpy(s, name); s = id; }\n(b) { name = (char*) malloc(strlen(name)+1); strcpy(name, name); id = id; }\n(c) { s.name = (char*) malloc(strlen(name)+1); strcpy(s.name, name); s.id = id; }\n(d) {s->name = (char*) malloc(strlen(name)+1); strcpy(s->name, name); s->id = id; }\n9. 다음과 같이 구조체 Student 및 구조체 변수 b에서 구조체 변수 a로 복사하는 함수\nCopy()를 정의하였다. 이 함수의 내용으로 적당한 것은?\ntypedef struct Student {\nchar* name;\nint id;\n} Student;\nvoid Copy(Student* a, const Student b);\n(a) {a.name = (char*) malloc(strlen(b.name)+1); strcpy(a.name, b.name); a.id = b.id; }\n(b) { a.name = (char*) malloc(strlen(b->name)+1); strcpy(a.name, b->name); a.id = b->id; }\n(c) { a->name = (char*)malloc(strlen(b.name)+1); strcpy(a->name, b.name); a->id = b.id; }\n(d) {a->name = (char*) malloc(strlen(b->name)+1); strcpy(a->name, b->name); a->id = b-\n>id; }\n10. 다음과 같이 struct 안에 struct를 포함시키고 main()에서 Box box; 를 정의하였을 때\nlength에 값을 할당하는 방법으로 적당한 것은?\ntypedef struct Rectangle {\nint length, depth;\n} Rectangle;\ntypedef struct Box {\nRectangle base;\nint height;\n} Box;\n(a) box.base.length = 1;\n(b) box->base->length = 1;\n(c) box:base:length = 1;\n(d) box::base::length = 1;\n11. 다음과 같이 struct 안에 struct를 포함시키고 main()에서 포인터 변수 Box* box; 를\n정의하였을 때 box->base->length = 1; 와 같이 값을 할당하기 전에 포인터 변수에\n메모리를 할당이 필요하다. 메모리를 할당하는 방법으로 적당한 것은?\na\ntypedef struct Rectangle {\nint length, depth;\n116",
+  "lines": [
+    "int id ;",
+    "} Student ;",
+    "void Store ( Student * s , char * name , int id ) ; ( a ) { s = ( char * ) malloc ( strlen ( name ) +1 ) ; strcpy ( s , name ) ; s = id ; } ( b ) { name = ( char * ) malloc ( strlen ( name ) +1 ) ; strcpy ( name , name ) ; id = id ; } ( c ) { s.name = ( char * ) malloc ( strlen ( name ) +1 ) ; strcpy ( s.name , name ) ; s.id = id ; } ( d ) { s- > name = ( char * ) malloc ( strlen ( name ) +1 ) ; strcpy ( s- > name , name ) ; s- > id = id ; }",
+    "9. 다음 과 같이 구조체 Student 및 구조체 변수 b 에서 구조체 변수 a 로 복사 하는 함수 Copy ( ) 를 정의 하였다 . 이 함수 의 내용 으로 적당한 것은 ?",
+    "typedef struct Student { char * name ;",
+    "int id ; } Student ;",
+    "void Copy ( Student * a , const Student b ) ;",
+    "( a ) { a.name = ( char * ) malloc ( strlen ( b.name ) +1 ) ; strcpy ( a.name , b.name ) ; a.id = b.id ; } ( b ) { a.name = ( char * ) malloc ( strlen ( b- > name ) +1 ) ; strcpy ( a.name , b- > name ) ; a.id = b- > id ; } ( c ) { a- > name = ( char * ) malloc ( strlen ( b.name ) +1 ) ; strcpy ( a- > name , b.name ) ; a- > id = b.id ; } ( d ) { a- > name = ( char * ) malloc ( strlen ( b- > name ) +1 ) ; strcpy ( a- > name , b- > name ) ; a- > id = b- > id ; }",
+    "10. 다음 과 같이 struct 안에 struct 를 포함 시키고 main ( ) 에서 Box box ; 를 정의 하였을 때 length 에 값 을 할당 하는 방법 으로 적당한 것은 ?",
+    "typedef struct Rectangle { int length , depth ; } Rectangle ; typedef struct Box { Rectangle base ; int height ;",
+    "} Box ;",
+    "( a ) box.base.length = 1 ; ( b ) box- > base- > length = 1 ; ( c ) box : base : length = 1 ; ( d ) box :: base :: length = 1 ;",
+    "11. 다음 과 같이 struct 안에 struct 를 포함 시키고 main ( ) 에서 포인터 변수 Box * box ; 를 정의 하였을 때 box- > base- > length = 1 ; 와 같이 값 을 할당 하기 전에 포인터 변수 에 메모리 를 할당 이 필요 하다 . 메모리 를 할당 하는 방법 으로 적당한 것은 ?",
+    "a",
+    "typedef struct Rectangle {",
+    "int length , depth ;",
+    "116"
+  ],
+  "confidences": [
+    0.963230550289154,
+    0.9715843796730042,
+    0.9591310620307922,
+    0.9881981611251831,
+    0.9765290021896362,
+    0.9630641341209412,
+    0.966764509677887,
+    0.9537749290466309,
+    0.9943323731422424,
+    0.9794561266899109,
+    0.9153348207473755,
+    0.9535370469093323,
+    0.9904614686965942,
+    0.9366652965545654,
+    0.9822192788124084,
+    0.9827747941017151,
+    0.9893788695335388
+  ]
+}

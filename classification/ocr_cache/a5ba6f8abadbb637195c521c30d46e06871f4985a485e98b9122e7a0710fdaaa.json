@@ -1,0 +1,27 @@
+{
+  "full_text": "596XCD\nA DIVING\nFALES\n29\nSmar\nSIM AND LOAD AVAILABLEN\nSUYOP\nSEPTIC TANK\nCola\nTERBLY\nFRES\nice cream",
+  "lines": [
+    "596XCD",
+    "A DIVING",
+    "FALES",
+    "29",
+    "Smar",
+    "SIM AND LOAD AVAILABLEN",
+    "SUYOP SEPTIC TANK",
+    "Cola",
+    "TERBLY",
+    "FRES ice cream"
+  ],
+  "confidences": [
+    0.9910086393356323,
+    0.989836573600769,
+    0.8031906485557556,
+    0.9792453050613403,
+    0.9445107579231262,
+    0.8598169088363647,
+    0.9505302309989929,
+    0.9627332091331482,
+    0.8645516633987427,
+    0.828153669834137
+  ]
+}

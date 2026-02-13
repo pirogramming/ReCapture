@@ -1,0 +1,15 @@
+{
+  "full_text": "10 10\n2022 New Anime SLAM DUNK\nSakuragi Hanamichi 10 Number\nHoodie Sweatshirt\nVISA\nSPECIFICATIONS",
+  "lines": [
+    "10 10",
+    "2022 New Anime SLAM DUNK Sakuragi Hanamichi 10 Number Hoodie Sweatshirt",
+    "VISA",
+    "SPECIFICATIONS"
+  ],
+  "confidences": [
+    0.9296895861625671,
+    0.8029236793518066,
+    0.7052580118179321,
+    0.9579800367355347
+  ]
+}

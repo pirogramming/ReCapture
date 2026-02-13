@@ -1,38 +1,71 @@
-# 파이썬 캐시 
+# =========================
+# Python cache / build
+# =========================
 __pycache__/
 *.py[cod]
-*.pyc
+*.pyo
+*.pyd
+.Python
 
-# 가상환경
+# =========================
+# Virtualenv / Conda
+# =========================
 .conda/
 env/
 venv/
+ENV/
+env.bak/
+venv.bak/
 
-# 데이터베이스
+# =========================
+# Database
+# =========================
 db.sqlite3
+*.db
 
-# 미디어 및 정적 파일 폴더
+# =========================
+# Media / Static / Storage
+# =========================
 media/
+static/
 storage/
 
-# VS Code 설정
+# =========================
+# VS Code / IDE
+# =========================
 .vscode/
-
-# 보안 및 환경 설정 파일
-.env
-credentials.json
-token.json
-
-# Celery
-celerybeat-schedule
-
-# 로그
-*.log
-
-# OS
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
 
-# cookie
+# =========================
+# Security / Env
+# =========================
+.env
+.env.local
+.env.*.local
+.env.example
+
+# Credentials / API keys (절대 커밋 금지)
+classification/google_credentials.json
+**/credentials.json
+**/api_keys.json
+token.json
 cookies.txt
 cookie.txt
+
+# =========================
+# ML data / artifacts
+# =========================
+classification/train_data/
+classification/test_data/
+classification/train_text.csv
+
+# =========================
+# Celery / logs
+# =========================
+celerybeat-schedule
+*.log

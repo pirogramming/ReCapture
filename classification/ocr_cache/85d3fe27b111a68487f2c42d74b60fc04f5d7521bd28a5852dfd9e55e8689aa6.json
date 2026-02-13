@@ -1,0 +1,31 @@
+{
+  "full_text": "PRACTICE EXERCISE\nE7.3\nReference code\nimport java.util.Scanner;\npublic class PrintAllSubstrings\npublic static void main(String[] args)\nScanner in = new Scanner(System.in);\nSystem.out.println(\"Enter a word: \");\nString word = in.next();\nfor (int length = 1; length <= word.length(); length++)\nfor (int pos = 0; pos <= word.length() - length; pos++)\n{\nSyst\nword.substring(pos, pos + length));",
+  "lines": [
+    "PRACTICE EXERCISE",
+    "E7.3",
+    "Reference code",
+    "import java.util.Scanner ;",
+    "public class PrintAllSubstrings",
+    "public static void main ( String [ ] args )",
+    "Scanner in = new Scanner ( System.in ) ; System.out.println ( \" Enter a word : \" ) ; String word = in.next ( ) ;",
+    "for ( int length = 1 ; length < = word.length ( ) ; length ++ )",
+    "for ( int pos = 0 ; pos < = word.length ( ) - length ; pos ++ )",
+    "{",
+    "Syst",
+    "word.substring ( pos , pos + length ) ) ;"
+  ],
+  "confidences": [
+    0.9761099219322205,
+    0.9685200452804565,
+    0.9905914664268494,
+    0.9384646415710449,
+    0.9799317121505737,
+    0.9567475914955139,
+    0.9403018951416016,
+    0.9470107555389404,
+    0.8992876410484314,
+    0.58292156457901,
+    0.8794530630111694,
+    0.9325493574142456
+  ]
+}

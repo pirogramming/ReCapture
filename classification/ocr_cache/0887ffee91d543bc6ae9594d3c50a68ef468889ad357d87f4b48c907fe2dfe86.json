@@ -1,0 +1,15 @@
+{
+  "full_text": "4.3\nBiased Coins (10 Points)\nWe have a bag of three biased coins a, b, and c with probabilities of coming up heads of\n20%, 60%, and 80%, respectively. One coin is drawn randomly from the bag (with an equal\nlikelihood of drawing each of the three coins), and then the coin is flipped three times to\ngenerate the outcomes X1, X2, and X3.\n(a) Draw the Bayesian network corresponding to this setup and define the necessary CPTs.\n(5 points)\n(b) Calculate which coin was most likely to have been drawn from the bag if the observed\nflips come out heads twice and tails once. (5 points)",
+  "lines": [
+    "4.3",
+    "Biased Coins ( 10 Points )",
+    "We have a bag of three biased coins a , b , and c with probabilities of coming up heads of 20 % , 60 % , and 80 % , respectively . One coin is drawn randomly from the bag ( with an equal likelihood of drawing each of the three coins ) , and then the coin is flipped three times to generate the outcomes X1 , X2 , and X3 .",
+    "( a ) Draw the Bayesian network corresponding to this setup and define the necessary CPTs . ( 5 points ) ( b ) Calculate which coin was most likely to have been drawn from the bag if the observed flips come out heads twice and tails once . ( 5 points )"
+  ],
+  "confidences": [
+    0.9917281270027161,
+    0.9741185903549194,
+    0.977773129940033,
+    0.9851000308990479
+  ]
+}

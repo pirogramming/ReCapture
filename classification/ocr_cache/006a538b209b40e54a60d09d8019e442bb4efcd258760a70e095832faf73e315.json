@@ -1,0 +1,29 @@
+{
+  "full_text": "SOLARIS\nLINUX\nOS별 점검 파일 위치 및 점검 방법\n[Telnet]\n#cat /etc/default/login\nCONSOLE=/dev/console\n[SSH]\n#cat /etc/ssh/sshd_config\nPermit RootLogin no\n[Telnet]\n#cat /etc/pam.d/login\nauth required /lib/security/pam_securetty.so\n#cat /etc/securetty",
+  "lines": [
+    "SOLARIS",
+    "LINUX",
+    "OS 별 점검 파일 위치 및 점검 방법",
+    "[ Telnet ]",
+    "#cat / etc / default / login CONSOLE = / dev / console",
+    "[ SSH ]",
+    "#cat / etc / ssh / sshd_config Permit RootLogin no",
+    "[ Telnet ]",
+    "#cat /etc/pam.d/login",
+    "auth required /lib/security/pam_securetty.so",
+    "#cat / etc / securetty"
+  ],
+  "confidences": [
+    0.9903478622436523,
+    0.9877150654792786,
+    0.9944078922271729,
+    0.9451183080673218,
+    0.9653244018554688,
+    0.8394719958305359,
+    0.9645150899887085,
+    0.9389669299125671,
+    0.9409814476966858,
+    0.9669032692909241,
+    0.9585428833961487
+  ]
+}

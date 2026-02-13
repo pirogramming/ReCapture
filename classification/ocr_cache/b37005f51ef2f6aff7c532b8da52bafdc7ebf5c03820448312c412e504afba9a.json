@@ -1,0 +1,35 @@
+{
+  "full_text": "62.1.6 Vector space\n~a special set of vectors\nDef 9.6.1 vector space\n(set of vectors (= V) with two operations.\nvector addition, scalar multiplication is\na vector space if the followings are satisfied.\nif eV and ev\nthen +V (덧성에 대해 알혀있다.)\n(2)x+12+2\n(8)+(2+3)(241)+2\nArad There is a unique IGV such that += (+1)\ncs) it sev, there exists - 16V such that ε+ (-2) = (PS4!)\n•(Q) if BEV and kis any scalar then kɛev\n(7) K(22)\nKK4 kg\n(1) (kt)k.+ kaž\n(9) k. (ka) • (k.ka)\n(10) 1x = x\n다항식 치수를 위한 해줘야 한다 ecor space\nex) 8차 다항식품 00\nNote IR, Rare vector space\nExamples) Text p. 528\nset V of positive real number\nX+1 #\nk22 x*\nI9yEv\n'': 정의한다.\nIs va vector space?\n→ vector space st sublate BA check!",
+  "lines": [
+    "62.1.6 Vector space ~ a special set of vectors",
+    "Def 9.6.1 vector space ( set of vectors ( = V ) with two operations . vector addition , scalar multiplication is a vector space if the followings are satisfied . if eV and ev then + V ( 덧 성에 대해 알혀 있다 . )",
+    "( 2 ) x + 12 + 2 ( 8 ) + ( 2 + 3 ) ( 241 ) +2",
+    "Arad There is a unique IGV such that + = ( +1 ) cs ) it sev , there exists - 16V such that ε + ( -2 ) = ( PS4 ! ) • ( Q ) if BEV and kis any scalar then kɛev",
+    "( 7 ) K ( 22 )",
+    "KK4 kg",
+    "( 1 ) ( kt ) k . + kaž ( 9 ) k . ( ka ) • ( k.ka ) ( 10 ) 1x = x",
+    "다항식 치수 를 위한 해줘야 한다 ecor space",
+    "ex ) 8 차 다항 식품 00",
+    "Note IR , Rare vector space Examples ) Text p . 528 set V of positive real number",
+    "X + 1 # k22 x *",
+    "I9yEv",
+    "' ' : 정의 한다 .",
+    "Is va vector space ? → vector space st sublate BA check !"
+  ],
+  "confidences": [
+    0.7794913649559021,
+    0.7871490120887756,
+    0.45995211601257324,
+    0.6833437085151672,
+    0.6601648330688477,
+    0.297286719083786,
+    0.6198732256889343,
+    0.7421175837516785,
+    0.394498348236084,
+    0.84627366065979,
+    0.4728574752807617,
+    0.4496791362762451,
+    0.47618043422698975,
+    0.7172386050224304
+  ]
+}

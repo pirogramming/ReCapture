@@ -16,10 +16,10 @@ def create_default_categories(sender, instance, created, **kwargs):
         
         # 6대 대분류 정의
         default_cats = [
-            ('finance', '결제/금융'),
+            ('finance', '결제/예약'),
             ('study_note', '학습/노트'),
-            ('info', '문서/정보'),
-            ('others', '기타정보(비정보)'),
+            ('info', '정보'),
+            ('others', '기타'),
         ]
         for key, name in default_cats:
             Category.objects.create(

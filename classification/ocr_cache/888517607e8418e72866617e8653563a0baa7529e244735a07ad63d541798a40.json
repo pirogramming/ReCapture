@@ -1,0 +1,13 @@
+{
+  "full_text": "(b) Suppose that one person in 100,000 has a particular disease. There is a test for the\ndisease that gives a positive result 90% of the time when given to someone with the\ndisease. When given to someone without the disease, 95% of the time it gives a negative\nresult. Find\n(1) the probability that a person who tests positive has the disease. (2 points)\n(2) the probability that a person who tests negative does not have the disease. (3\npoints)\nHint: Make use of the Bayes' theorem.",
+  "lines": [
+    "( b ) Suppose that one person in 100,000 has a particular disease . There is a test for the disease that gives a positive result 90 % of the time when given to someone with the disease . When given to someone without the disease , 95 % of the time it gives a negative result . Find",
+    "( 1 ) the probability that a person who tests positive has the disease . ( 2 points ) ( 2 ) the probability that a person who tests negative does not have the disease . ( 3 points )",
+    "Hint : Make use of the Bayes ' theorem ."
+  ],
+  "confidences": [
+    0.9857973456382751,
+    0.9822225570678711,
+    0.9652541279792786
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "full_text": "UP PF BOK\n2 PDS\nKANG-ING-STAVA LORE\nCHAMBLY EXT\n0052-535\nHANИDVI\nCOATE",
+  "lines": [
+    "UP PF BOK",
+    "2 PDS",
+    "KANG - ING - STAVA LORE",
+    "CHAMBLY EXT",
+    "0052-535",
+    "HANИDVI",
+    "COATE"
+  ],
+  "confidences": [
+    0.5441283583641052,
+    0.38379761576652527,
+    0.490139365196228,
+    0.47222527861595154,
+    0.8134247660636902,
+    0.6977750658988953,
+    0.749462902545929
+  ]
+}

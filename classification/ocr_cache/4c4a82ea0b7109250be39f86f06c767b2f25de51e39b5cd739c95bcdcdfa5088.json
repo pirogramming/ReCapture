@@ -1,0 +1,31 @@
+{
+  "full_text": "HAOON\nMEVS\nEQR 접속하면 디즈니+ 이용권 증정!\nPHOTOISM\n5\nphotoism\nMADE IN KOREA\n메이드인코리아\nKEEP YOURSELF ALIVE\n50\nPHOTOISM\nKEEP YOURSELF ALIVE",
+  "lines": [
+    "HAOON",
+    "MEVS",
+    "EQR 접속 하면 디즈니 + 이용권 증정 !",
+    "PHOTOISM",
+    "5",
+    "photoism",
+    "MADE IN KOREA",
+    "메이드인 코리아",
+    "KEEP YOURSELF ALIVE",
+    "50",
+    "PHOTOISM",
+    "KEEP YOURSELF ALIVE"
+  ],
+  "confidences": [
+    0.5426862239837646,
+    0.792708158493042,
+    0.9144201278686523,
+    0.9939481616020203,
+    0.9181923866271973,
+    0.9947113990783691,
+    0.9963990449905396,
+    0.9711414575576782,
+    0.9971109628677368,
+    0.9699256420135498,
+    0.9926862716674805,
+    0.9974435567855835
+  ]
+}

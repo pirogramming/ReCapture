@@ -1,0 +1,29 @@
+{
+  "full_text": "3\nbee\n3\nLicken\nYum\nHolly\ncrispy\nFries\nAds\nFries\n1 WM DBL YG P\n1 REG COK P\nREG FFRE\n1 DBL CHIY YU\n1 REG FFRIES PO\n1 REG COKE ZEFO\n11 Item(s)\nTOTAL DUE\nCASH\nCHANGE\nWATable Sale\nWAT orok\nWAT-Exemp",
+  "lines": [
+    "3",
+    "bee",
+    "3",
+    "Licken",
+    "Yum",
+    "Holly crispy Fries",
+    "Ads",
+    "Fries",
+    "1 WM DBL YG P 1 REG COK P REG FFRE 1 DBL CHIY YU 1 REG FFRIES PO 1 REG COKE ZEFO 11 Item ( s ) TOTAL DUE",
+    "CASH CHANGE",
+    "WATable Sale WAT orok WAT - Exemp"
+  ],
+  "confidences": [
+    0.7159509062767029,
+    0.9347805976867676,
+    0.8000568151473999,
+    0.6801573038101196,
+    0.8250080943107605,
+    0.9243819117546082,
+    0.9017495512962341,
+    0.9550973176956177,
+    0.8641464710235596,
+    0.988896369934082,
+    0.654682993888855
+  ]
+}

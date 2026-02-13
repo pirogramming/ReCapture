@@ -1,0 +1,15 @@
+{
+  "full_text": "(b) Assume that we have earned 5 samples from the sampling process as follows (the order\nof the random variables is: Burglary, Earthquake, Alarm, JohnCalls, MarryCalls):\n1. false, false, false, false, false],\n2. false, false true, true, false],\n3. true, false, true, true, true],\n4. false, false true, false, false],\n5. [false, false, false, true, false].\nAccording to the given samples and rejection sampling, what is the (estimated) prob-\nability of the event that a burglary had invaded the house when the alarm rang? (5\npoints)\n4",
+  "lines": [
+    "( b ) Assume that we have earned 5 samples from the sampling process as follows ( the order of the random variables is : Burglary , Earthquake , Alarm , JohnCalls , MarryCalls ) :",
+    "1. false , false , false , false , false ] , 2. false , false true , true , false ] , 3. true , false , true , true , true ] , 4. false , false true , false , false ] , 5. [ false , false , false , true , false ] .",
+    "According to the given samples and rejection sampling , what is the ( estimated ) prob- ability of the event that a burglary had invaded the house when the alarm rang ? ( 5 points )",
+    "4"
+  ],
+  "confidences": [
+    0.9811607003211975,
+    0.9402761459350586,
+    0.982483446598053,
+    0.9626405239105225
+  ]
+}

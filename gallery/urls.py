@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from .views import bookmark_views
+from .views import base_views
 
 app_name = 'gallery'
 
@@ -9,6 +11,7 @@ urlpatterns = [
     # 5. 통합 조회 API (전체 사진 + 갤러리 상태)
     path('photos/', views.photo_list, name='photo_list'),
     path('photos/<int:photoid>/', views.photo_detail, name='photo_detail'),
+    path('photos/<int:photo_id>/bookmark/', bookmark_views.toggle_bookmark, name='toggle_bookmark'),
     
     # 1. 사진 북마크
     path('bookmarks/', views.bookmark_list, name='bookmark_list'), # GET: 목록 조회
@@ -29,4 +32,6 @@ urlpatterns = [
 
     # 5. 세부 카테고리 만들기
     path('categories/add/', views.add_category, name='add_category'),
+
+    path('settings/', base_views.settings_view, name='settings'),
 ]

@@ -5,6 +5,26 @@ from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from gallery.models import Photo, Category
 import json
+from gallery.models import Photo
+from django.views.decorators.http import require_POST
+
+@login_required
+@require_POST
+def toggle_bookmark(request, photo_id):
+    """
+    사진의 북마크 상태를 실시간으로 토글(On/Off)하는 Ajax 뷰
+    """
+    photo = get_object_or_404(Photo, id=photo_id, user=request.user)
+    
+    # 북마크 상태 반전
+    photo.is_bookmarked = not photo.is_bookmarked
+    photo.save()
+    
+    return JsonResponse({
+        'success': True,
+        'is_bookmarked': photo.is_bookmarked,
+        'message': '북마크 상태가 변경되었습니다.'
+    })
 
 @login_required
 def bookmark_list(request):

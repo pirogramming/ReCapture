@@ -1,0 +1,19 @@
+{
+  "full_text": "RAC SE\nLS\nPALEDECZ\n.....\nMALLADAB\nMALADAC",
+  "lines": [
+    "RAC SE",
+    "LS",
+    "PALEDECZ",
+    ".....",
+    "MALLADAB",
+    "MALADAC"
+  ],
+  "confidences": [
+    0.7338495254516602,
+    0.6720424294471741,
+    0.9076639413833618,
+    0.6667869091033936,
+    0.5807526111602783,
+    0.5587021112442017
+  ]
+}

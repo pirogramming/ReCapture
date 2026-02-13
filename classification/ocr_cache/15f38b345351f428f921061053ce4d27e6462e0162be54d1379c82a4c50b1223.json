@@ -1,0 +1,35 @@
+{
+  "full_text": "Tandem\nDON'T FO\nJoin us\nYou for happy\nBa\nBring Your\nGet 10\nfor each\nyour grock\nhour!\nMonday-Friday\n4-6 pm\n$1 off Beer a\npreserve\nNon-BP\nLinin\n65\nFOODS\nKET",
+  "lines": [
+    "Tandem",
+    "DON'T FO",
+    "Join us",
+    "You for happy",
+    "Ba Bring Your Get 10 for each",
+    "your grock",
+    "hour !",
+    "Monday - Friday",
+    "4-6 pm",
+    "$ 1 off Beer a",
+    "preserve",
+    "Non - BP",
+    "Linin",
+    "65 FOODS KET"
+  ],
+  "confidences": [
+    0.8996003866195679,
+    0.911014974117279,
+    0.9774705767631531,
+    0.9280946254730225,
+    0.8286615610122681,
+    0.818625271320343,
+    0.8883228302001953,
+    0.991558849811554,
+    0.9764054417610168,
+    0.9270698428153992,
+    0.9679003357887268,
+    0.8999223709106445,
+    0.6703928112983704,
+    0.8810364007949829
+  ]
+}

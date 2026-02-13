@@ -1,0 +1,33 @@
+{
+  "full_text": "CHAPTER Shear Stress in Beams.\nConsider a beam of height 'h', thickness 't' and subject to a positive shear\nforce\nAssume shear stress is uniformly\ndistributed through the thickness\nof the beam\nvanish\nRemark. the equality of the vertical honzontal shear\nstress leads to the fact that an either the top or\nbottom faces of the beam the shear stress must\nno vertical stress Pysh\nDenivation of the shear formula\nto determine the shear stress. I, in the beam 'd's convenient to work with the\nhorizontal shear stress rather the vertical\nif we wish to consider the normal\nstress on the Ⓡ faces of the\nbeam they are given.\na\na--my\n1",
+  "lines": [
+    "CHAPTER Shear Stress in Beams .",
+    "Consider a beam of height ' h ' , thickness ' t ' and subject to a positive shear",
+    "force",
+    "Assume shear stress is uniformly distributed through the thickness of the beam",
+    "vanish",
+    "Remark . the equality of the vertical honzontal shear stress leads to the fact that an either the top or bottom faces of the beam the shear stress must",
+    "no vertical stress Pysh",
+    "Denivation of the shear formula",
+    "to determine the shear stress . I , in the beam ' d's convenient to work with the horizontal shear stress rather the vertical",
+    "if we wish to consider the normal stress on the Ⓡ faces of the beam they are given .",
+    "a",
+    "a -- my",
+    "1"
+  ],
+  "confidences": [
+    0.882933497428894,
+    0.8988345861434937,
+    0.9634199738502502,
+    0.9143825173377991,
+    0.7791174650192261,
+    0.9228270053863525,
+    0.7681467533111572,
+    0.9121321439743042,
+    0.9239954948425293,
+    0.9463450312614441,
+    0.8599562644958496,
+    0.5444802641868591,
+    0.6574167609214783
+  ]
+}

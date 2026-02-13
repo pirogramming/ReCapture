@@ -1,0 +1,41 @@
+{
+  "full_text": "SHERATON\nCebu Mactan Resort\nSHERATON\nCebu Mactan Resort\nS\nRATON\nMactan Resort\nSHERATON\nCebu Mactan Resort\nERATO\nMact\nStan Reso\nTON\nCebu alan Resort\nSHER\nCebu Mack\nS\nTCN\nResort\nSHERATON\nCebu Mactan Resort\nSHERATON\nCebu Mactan Resort\nTON\nn Resort",
+  "lines": [
+    "SHERATON Cebu Mactan Resort",
+    "SHERATON Cebu Mactan Resort",
+    "S",
+    "RATON Mactan Resort",
+    "SHERATON Cebu Mactan Resort",
+    "ERATO",
+    "Mact",
+    "Stan Reso",
+    "TON",
+    "Cebu alan Resort",
+    "SHER Cebu Mack",
+    "S",
+    "TCN",
+    "Resort",
+    "SHERATON Cebu Mactan Resort",
+    "SHERATON Cebu Mactan Resort",
+    "TON n Resort"
+  ],
+  "confidences": [
+    0.9388196468353271,
+    0.9823330044746399,
+    0.8478984236717224,
+    0.9378366470336914,
+    0.9496612548828125,
+    0.683098316192627,
+    0.6995744705200195,
+    0.6702401041984558,
+    0.7795644998550415,
+    0.8075549602508545,
+    0.7407339811325073,
+    0.9174823760986328,
+    0.8940610885620117,
+    0.7278103828430176,
+    0.9337760210037231,
+    0.9670107364654541,
+    0.771265983581543
+  ]
+}

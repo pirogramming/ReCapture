@@ -11,32 +11,47 @@
 </head>
 <body>
     <header>
-        <h1><a href="/">Re:Capture</a></h1>
+        <div class="header-left">
+            {% block sidebar_toggle %}
+                <button id="sidebarToggle" class="sidebar-open-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            {% endblock sidebar_toggle %}
+            <h1><a href="/">Re:Capture</a></h1>
+        </div>
         
-        <div style="display: flex; align-items: center;">
+        <div class="header-right">
             {% if user.is_authenticated %}
                 <nav>
                     <a href="{% url 'accounts:mypage' %}" class="btn-mypage">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                </nav>
 
-                <div class="notification-dropdown">
-                    <button class="noti-btn">
-                        <i class="fa-solid fa-bell"></i>
-                        <span id="noti-count">{{ unread_notifications_count }}</span>
-                    </button>
-                    <div class="dropdown-content">
-                        {% for noti in latest_notifications %}
-                            <div class="noti-item {% if not noti.is_read %}unread{% endif %}">
-                                <span class="noti-type">[{{ noti.get_notif_type_display }}]</span><br>
-                                {{ noti.message }}
-                            </div>
-                        {% empty %}
-                            <div class="noti-item">새로운 알림이 없습니다.</div>
-                        {% endfor %}
+                    <a href="{% url 'gallery:settings' %}" class="btn-mypage" title="설정">
+                        <i class="fa-solid fa-gear"></i>
+                    </a>
+
+                    <div class="notification-dropdown">
+                        <button class="noti-btn">
+                            <i class="fa-solid fa-bell"></i>
+                            {% if unread_notifications_count > 0 %}
+                                <span id="noti-count">{{ unread_notifications_count }}</span>
+                            {% endif %}
+                        </button>
+                        
+                        <div class="dropdown-content">
+                            {% for noti in latest_notifications %}
+                                <div class="noti-item {% if not noti.is_read %}unread{% endif %}">
+                                    <span class="noti-type">[{{ noti.get_notif_type_display }}]</span><br>
+                                    {{ noti.message }}
+                                </div>
+                            {% empty %}
+                                <div class="noti-item">새로운 알림이 없습니다.</div>
+                            {% endfor %}
+                        </div>
                     </div>
-                </div>
+                </nav>
+                
             {% else %}
                 <nav>
                     <a href="{% provider_login_url 'google' process='login' %}" class="btn-login">구글 로그인</a>

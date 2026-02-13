@@ -19,8 +19,9 @@ a {
 /* 헤더 디자인 */
 header {
     background: #ffffff;
+    flex-direction: row !important;
     padding: 0 40px;
-    height: 70px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,11 +31,40 @@ header {
     z-index: 1000;
 }
 
+.header-left {
+    display: flex;
+    align-items: center; /* 햄버거와 로고의 높이를 맞춤 */
+    gap: 12px;
+}
+
+header h1 {
+    margin: 0; /* h1 특유의 기본 마진 제거 */
+    line-height: 1; /* 높이 계산 오류 방지 */
+}
+
 header h1 a {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
     color: #007bff;
-    letter-spacing: -0.5px;
+    display: block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center; /* 아이콘들 세로 중앙 정렬 */
+    gap: 8px;
+}
+
+/* 햄버거 버튼 리셋 */
+.sidebar-open-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #333;
 }
 
 nav {
@@ -49,11 +79,28 @@ nav {
 }
 
 .btn-mypage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f1f3f5;
+    position: relative;
+    border: none;
+}
+
+.noti-btn {
+    border: none;
+    color:#555;
+    background: #ffffff;
+}
+/* .btn-mypage {
     padding: 7px 16px;
     background: #f1f3f5;
     border-radius: 50px;
     transition: background 0.2s;
-}
+} */
 
 .btn-mypage:hover {
     background: #e9ecef;
@@ -70,14 +117,14 @@ nav {
     margin-left: 20px;
 }
 
-.noti-btn {
+/* .noti-btn {
     padding: 9.5px 16px;
     background: #f1f3f5;
     border-radius: 50px;
     transition: background 0.2s;
     border: none;
     cursor: pointer;
-}
+} */
 
 #noti-count {
     background: #ff4757;
@@ -144,7 +191,7 @@ main {
     header {
         padding: 0 20px;
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         padding-bottom: 15px;
     }
 

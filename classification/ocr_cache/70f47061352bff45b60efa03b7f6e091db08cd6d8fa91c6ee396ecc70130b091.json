@@ -1,0 +1,17 @@
+{
+  "full_text": "HAKES\nYS\n2014 FIVE GUYS Enterprises, LLC\nMAKES\nSHAKES\nFIVE\nSHAKES\nSH",
+  "lines": [
+    "HAKES YS",
+    "2014 FIVE GUYS Enterprises , LLC",
+    "MAKES",
+    "SHAKES FIVE SHAKES",
+    "SH"
+  ],
+  "confidences": [
+    0.7883581519126892,
+    0.9156782627105713,
+    0.8861018419265747,
+    0.9865299463272095,
+    0.9600204229354858
+  ]
+}

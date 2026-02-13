@@ -1,6 +1,33 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
-from gallery.models import Photo, Category
+from gallery.models import Photo, UserSetting, Category
+
+@login_required
+@login_required
+def settings_view(request):
+    # 설정 객체가 없으면 생성
+    setting, created = UserSetting.objects.get_or_create(user=request.user)
+    categories = Category.objects.filter(user=request.user)
+
+    if request.method == 'POST':
+        # 알림 설정 업데이트
+        setting.is_reminder_enabled = request.POST.get('is_reminder') == 'on'
+        setting.reminder_days = int(request.POST.get('reminder_days', 7))
+        setting.reminder_categories.set(request.POST.getlist('reminder_cats'))
+
+        # 휴지통 설정 업데이트
+        setting.is_auto_trash_enabled = request.POST.get('is_auto_trash') == 'on'
+        setting.auto_trash_days = int(request.POST.get('auto_trash_days', 30))
+        setting.trash_expiry_days = int(request.POST.get('trash_expiry', 30))
+        setting.auto_trash_categories.set(request.POST.getlist('trash_cats'))
+        
+        setting.save()
+        return redirect('gallery:settings')
+
+    return render(request, 'gallery/settings.html', {
+        'setting': setting,
+        'categories': categories
+    })
 
 @login_required(login_url='/accounts/login/')
 def photo_list(request):

@@ -1,8 +1,0 @@
-name: recapture_env
-channels:
-  - defaults
-dependencies:
-  - python=3.10.16
-  - pip
-  - pip:
-      - -r requirements.txt

@@ -1,0 +1,19 @@
+{
+  "full_text": "Sol) Questions: Design Goals of Internet Protocol\nWhat is Store & forward packet switching? packet switching a method of exchanging packets that may be shared by multiple\nsimultaneous communication sessions based on packet by packet Store-and-forward means that the packet switch must\nreceive the entire packet before it can begin to transmit the first bit of the packet onto the outbound link\nDutagram? the specialized packet to be\nchet a chunuto orwarded to the destination, which is transported across the\nunderlying networks, Packet a chunk of data that can be easily handie (header+data+tail),\nWhat is Layered Architecture in designing the Internet protocol? Layering: A technique to organize a network system in\nsuccession of logically distinct entities, such that the service provided by one entity is solely based on the service prov\nthe previous flower level) entity for modularization cases maintenance, updating of system\nWhat is Encapsulation? For level N-1, the whole packet coming from level N is treated as one integral unit. End-to-End\nArguments: A technique for two processes communicating with each other via some communication means\nWhat is the differences between Point-to-point network and broadcast network?\n• What is Network Topology? And explain with an example, refers to the physical or logical arrangement of a network or\nconnectivity\nWhy we need Protocols? For interacting and exchanging messages for interoperability among different vendors!\nWhy does the protocol need standard? Make consensus (eg, Internet, 56, 66) among different vendors\nd. de-factor (eg, Apple, google)\nMUQURESH",
+  "lines": [
+    "Sol ) Questions : Design Goals of Internet Protocol",
+    "What is Store & forward packet switching ? packet switching a method of exchanging packets that may be shared by multiple simultaneous communication sessions based on packet by packet Store - and - forward means that the packet switch must receive the entire packet before it can begin to transmit the first bit of the packet onto the outbound link",
+    "Dutagram ? the specialized packet to be",
+    "chet a chunuto orwarded to the destination , which is transported across the underlying networks , Packet a chunk of data that can be easily handie ( header + data + tail ) , What is Layered Architecture in designing the Internet protocol ? Layering : A technique to organize a network system in succession of logically distinct entities , such that the service provided by one entity is solely based on the service prov the previous flower level ) entity for modularization cases maintenance , updating of system What is Encapsulation ? For level N - 1 , the whole packet coming from level N is treated as one integral unit . End - to - End Arguments : A technique for two processes communicating with each other via some communication means What is the differences between Point - to - point network and broadcast network ? • What is Network Topology ? And explain with an example , refers to the physical or logical arrangement of a network or connectivity Why we need Protocols ? For interacting and exchanging messages for interoperability among different vendors ! Why does the protocol need standard ? Make consensus ( eg , Internet , 56 , 66 ) among different vendors",
+    "d . de - factor ( eg , Apple , google )",
+    "MUQURESH"
+  ],
+  "confidences": [
+    0.9726055264472961,
+    0.9001994132995605,
+    0.8448753952980042,
+    0.9034701585769653,
+    0.8011749386787415,
+    0.47048327326774597
+  ]
+}

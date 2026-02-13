@@ -6,10 +6,10 @@ from datetime import timedelta
 class Category(models.Model):
     # 6가지 고정 대분류 정의
     BASIC_CATEGORIES = [
-        ('finance', '결제/금융'),
+        ('finance', '결제/예약'),
         ('study_note', '학습/노트'),
-        ('info', '문서/정보'),
-        ('others', '기타정보(비정보)'),
+        ('info', '정보'),
+        ('others', '기타'),
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='categories')
@@ -104,3 +104,20 @@ class Notification(models.Model):
 
     def __str__(self):
         return f"[{self.user.username}] {self.message}"
+
+class UserSetting(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    
+    # 알림 설정 관련
+    is_reminder_enabled = models.BooleanField(default=True) # 알림 여부
+    reminder_categories = models.ManyToManyField('Category', blank=True) # 선택된 카테고리
+    reminder_days = models.IntegerField(default=7) # n일 미확인 시
+    
+    # 자동 휴지통 설정 관련
+    is_auto_trash_enabled = models.BooleanField(default=False) # 이용 여부
+    auto_trash_categories = models.ManyToManyField('Category', related_name='trash_settings', blank=True)
+    auto_trash_days = models.IntegerField(default=30) # n일 미확인 시 이동
+    trash_expiry_days = models.IntegerField(default=30) # 휴지통 비우기 빈도 (3, 15, 30, 0=안함)
+
+    def __str__(self):
+        return f"{self.user.username}의 설정"

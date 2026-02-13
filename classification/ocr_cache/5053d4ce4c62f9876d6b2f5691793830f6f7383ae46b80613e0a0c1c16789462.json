@@ -1,0 +1,15 @@
+{
+  "full_text": "D\nDEINE\nDEADLINE\nBLACKPINE WORLD",
+  "lines": [
+    "D",
+    "DEINE",
+    "DEADLINE",
+    "BLACKPINE WORLD"
+  ],
+  "confidences": [
+    0.9589347243309021,
+    0.7059537768363953,
+    0.6867085099220276,
+    0.5066831111907959
+  ]
+}

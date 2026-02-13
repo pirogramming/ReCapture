@@ -1,0 +1,37 @@
+{
+  "full_text": "Quiz # 2 (~10.03)\n•\n1. Find an optimum SOP equation for\n•\n2. Simplify the follow example\n•\nUltra-Intelligent Computing/Communication Lab\nF(X, Y, Z) = Σm(0,1,2,4,6,7)\nF(U,V,W,X,Y,Z)=Σ(0,4,8,12,16,20,24,28,32,36,40,42,44,46,48,52,56,58,60,62)?\n3. Find all prime implicants for:\nCAU 중앙대학교\nCHUNG-ANG UNIVERSITY\nF(A,B,C,D)= Σm(0,2,3,8,9,10,11,12,13,14,15)\n2023 Logic Circuit\nCopyright CAU UC Lab all right reserved",
+  "lines": [
+    "Quiz # 2 ( ~ 10.03 )",
+    "•",
+    "1. Find an optimum SOP equation for",
+    "•",
+    "2. Simplify the follow example",
+    "•",
+    "Ultra - Intelligent Computing / Communication Lab",
+    "F ( X , Y , Z ) = Σm ( 0,1,2,4,6,7 )",
+    "F ( U , V , W , X , Y , Z ) = Σ ( 0,4,8,12,16,20,24,28,32,36,40,42,44,46,48,52,56,58,60,62 ) ?",
+    "3. Find all prime implicants for :",
+    "CAU 중앙 대학교",
+    "CHUNG - ANG UNIVERSITY",
+    "F ( A , B , C , D ) = Σm ( 0,2,3,8,9,10,11,12,13,14,15 )",
+    "2023 Logic Circuit",
+    "Copyright CAU UC Lab all right reserved"
+  ],
+  "confidences": [
+    0.9315711855888367,
+    0.5179896950721741,
+    0.9831550717353821,
+    0.5168649554252625,
+    0.9874487519264221,
+    0.5196973085403442,
+    0.9670841693878174,
+    0.9273008108139038,
+    0.9680541157722473,
+    0.9822840690612793,
+    0.8771246671676636,
+    0.943211555480957,
+    0.951905369758606,
+    0.9907354116439819,
+    0.9884092807769775
+  ]
+}

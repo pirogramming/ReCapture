@@ -1,0 +1,35 @@
+{
+  "full_text": "Disney\nHaddin\nTHE MIT\nBROADWAY\nMUSICAL\nCharlotte Theater\nDisney\nladdin\nTHE HIT\nBROADWAY\nMUSICAL\nMendes feat feinctions\nDISNEY\nTHE HIT\nBROADWAY\nMUSICAL\nMercedes Benz Selestion",
+  "lines": [
+    "Disney",
+    "Haddin",
+    "THE MIT",
+    "BROADWAY",
+    "MUSICAL",
+    "Charlotte Theater",
+    "Disney",
+    "laddin",
+    "THE HIT",
+    "BROADWAY MUSICAL",
+    "Mendes feat feinctions",
+    "DISNEY",
+    "THE HIT BROADWAY MUSICAL",
+    "Mercedes Benz Selestion"
+  ],
+  "confidences": [
+    0.6781502962112427,
+    0.823076069355011,
+    0.911910355091095,
+    0.6999220848083496,
+    0.8821185231208801,
+    0.9909095168113708,
+    0.516201913356781,
+    0.7327658534049988,
+    0.9693461656570435,
+    0.8706474304199219,
+    0.42001816630363464,
+    0.5309900045394897,
+    0.935444176197052,
+    0.7340892553329468
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "full_text": "Solution\n#2. Let R be the following relation on the set of real numbers:\n->\naRb [a] = [b], where [x] is the floor of x.\nDetermine whether R is:\n(a) reflexive.\n(b) symmetric.\n(c) antisymmetric.\nSolution:\n(a) R is reflexive: [a] = [a] is true for all real numbers.\n(b) R is symmetric: suppose [a] = [b]; then [b] = [a].\n(c) R is not antisymmetric: we can have a Rb and b Ra for distinct a and b. For example, [1.1] = [1.2].\nChung-Ang University)\nCAU\n37",
+  "lines": [
+    "Solution",
+    "# 2 . Let R be the following relation on the set of real numbers :",
+    "- >",
+    "aRb [ a ] = [ b ] , where [ x ] is the floor of x .",
+    "Determine whether R is :",
+    "( a ) reflexive .",
+    "( b ) symmetric .",
+    "( c ) antisymmetric .",
+    "Solution :",
+    "( a ) R is reflexive : [ a ] = [ a ] is true for all real numbers . ( b ) R is symmetric : suppose [ a ] = [ b ] ; then [ b ] = [ a ] . ( c ) R is not antisymmetric : we can have a Rb and b Ra for distinct a and b . For example , [ 1.1 ] = [ 1.2 ] .",
+    "Chung - Ang University )",
+    "CAU",
+    "37"
+  ],
+  "confidences": [
+    0.9546023011207581,
+    0.9865925908088684,
+    0.8464276194572449,
+    0.8639801144599915,
+    0.9839701652526855,
+    0.9837653040885925,
+    0.9814995527267456,
+    0.961591899394989,
+    0.944559633731842,
+    0.9270777106285095,
+    0.896683394908905,
+    0.7141040563583374,
+    0.9517725706100464
+  ]
+}

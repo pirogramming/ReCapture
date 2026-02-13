@@ -1,6 +1,6 @@
 # photos/urls.py
 from django.urls import path
-from photos.api import google, upload, import_job, photos, dedupe
+from photos.api import google, upload, import_job, photos, dedupe,classify
 
 app_name = "photos"
 
@@ -40,4 +40,6 @@ urlpatterns = [
 
     # 중복 제거
     path("dedupe/check", dedupe.check_duplicates, name="dedupe-check"),
+    #사진 분류(미분류)
+    path("classify", classify.classify_unclassified, name="classify-unclassified"),
 ]

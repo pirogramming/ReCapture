@@ -1,0 +1,274 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* 1. 전체 컨테이너 및 섹션 스타일링 */
+    .settings-container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 30px;
+        background: #fff;
+        border-radius: 24px;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+        font-family: 'Pretendard', sans-serif;
+    }
+
+    .settings-header {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 30px;
+        color: #1a1a1a;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .settings-section {
+        margin-bottom: 35px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .section-title {
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 18px;
+        color: #333;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* 2. iOS 스타일 토글 스위치 */
+    .switch-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: #e9e9ea;
+        transition: .3s;
+        border-radius: 34px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 22px; width: 22px;
+        left: 3px; bottom: 3px;
+        background-color: white;
+        transition: .3s;
+        border-radius: 50%;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    input:checked + .slider {
+        background-color: #34c759; /* iOS 초록색 */
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(22px);
+    }
+
+    /* 3. 세련된 드롭다운 (Select) */
+    .custom-select {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        background-color: #f9f9f9;
+        font-size: 15px;
+        color: #444;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23999%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C/polyline%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        background-size: 16px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .custom-select:focus {
+        outline: none;
+        border-color: #007bff;
+        background-color: #fff;
+    }
+
+    /* 4. 태그형 다중 선택 버튼 (Checkbox Chip) */
+    .chip-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .chip-item input {
+        display: none;
+    }
+
+    .chip-label {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #f1f1f1;
+        border-radius: 20px;
+        font-size: 14px;
+        color: #666;
+        cursor: pointer;
+        transition: 0.2s;
+        border: 1px solid transparent;
+    }
+
+    .chip-item input:checked + .chip-label {
+        background: #e7f3ff;
+        color: #007bff;
+        border-color: #007bff;
+        font-weight: 600;
+    }
+
+    /* 5. 저장 버튼 */
+    .btn-save {
+        width: 100%;
+        padding: 16px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 16px;
+        font-size: 17px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+        box-shadow: 0 4px 12px rgba(0,123,255,0.2);
+    }
+
+    .btn-save:hover {
+        background: #0056b3;
+        transform: translateY(-2px);
+    }
+
+    .disabled-section {
+        opacity: 0.5; /* 흐릿하게 */
+        pointer-events: none; /* 클릭 차단 */
+        filter: grayscale(1); /* 회색조 처리 */
+        transition: 0.3s ease;
+    }
+</style>
+
+<form method="post" class="settings-container">
+    {% csrf_token %}
+    <div class="settings-header">상세 설정</div>
+
+    <section class="settings-section">
+        <div class="switch-row">
+            <span class="section-title" style="margin-bottom:0;">🔔 리마인드 알림 활성화</span>
+            <label class="switch">
+                <input type="checkbox" id="reminderToggle" name="is_reminder" {% if setting.is_reminder_enabled %}checked{% endif %}>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div id="reminderOptions" style="margin-top: 20px;">
+            <p style="font-size: 14px; color: #888; margin-bottom: 8px;">알람 기준일</p>
+            <select name="reminder_days" class="custom-select">
+                <option value="3" {% if setting.reminder_days == 3 %}selected{% endif %}>3일 동안 미확인 시</option>
+                <option value="7" {% if setting.reminder_days == 7 %}selected{% endif %}>7일 동안 미확인 시</option>
+                <option value="14" {% if setting.reminder_days == 14 %}selected{% endif %}>14일 동안 미확인 시</option>
+            </select>
+
+            <div style="margin-top: 20px;">
+                <p style="font-size: 14px; color: #888; margin-bottom: 8px;">알림 대상 카테고리</p>
+                <div class="chip-group">
+                    {% for cat in categories %}
+                    <div class="chip-item">
+                        <input type="checkbox" id="rem_cat_{{ cat.id }}" name="reminder_cats" value="{{ cat.id }}" 
+                            {% if cat in setting.reminder_categories.all %}checked{% endif %}>
+                        <label for="rem_cat_{{ cat.id }}" class="chip-label">{{ cat.name }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="settings-section">
+        <div class="switch-row">
+            <span class="section-title" style="margin-bottom:0;">🗑️ 자동 휴지통 이동 서비스</span>
+            <label class="switch">
+                <input type="checkbox" id="trashToggle" name="is_auto_trash" {% if setting.is_auto_trash_enabled %}checked{% endif %}>
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div id="trashOptions" style="margin-top: 20px;">
+            <p style="font-size: 14px; color: #888; margin-bottom: 8px;">휴지통 비우기 빈도</p>
+            <select name="trash_expiry" class="custom-select">
+                <option value="3" {% if setting.trash_expiry_days == 3 %}selected{% endif %}>3일 후 자동 영구 삭제</option>
+                <option value="15" {% if setting.trash_expiry_days == 15 %}selected{% endif %}>15일 후 자동 영구 삭제</option>
+                <option value="30" {% if setting.trash_expiry_days == 30 %}selected{% endif %}>30일 후 자동 영구 삭제</option>
+                <option value="0" {% if setting.trash_expiry_days == 0 %}selected{% endif %}>자동 삭제 안 함</option>
+            </select>
+
+            <div style="margin-top: 20px;">
+                <p style="font-size: 14px; color: #888; margin-bottom: 8px;">대상 카테고리 선택</p>
+                <div class="chip-group">
+                    {% for cat in categories %}
+                    <div class="chip-item">
+                        <input type="checkbox" id="trash_cat_{{ cat.id }}" name="trash_cats" value="{{ cat.id }}"
+                            {% if cat in setting.auto_trash_categories.all %}checked{% endif %}>
+                        <label for="trash_cat_{{ cat.id }}" class="chip-label">{{ cat.name }}</label>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button type="submit" class="btn-save">설정 저장하기</button>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const reminderToggle = document.getElementById('reminderToggle');
+        const reminderOptions = document.getElementById('reminderOptions');
+        
+        const trashToggle = document.getElementById('trashToggle');
+        const trashOptions = document.getElementById('trashOptions');
+
+        // 상태 업데이트 함수
+        function updateStatus(toggle, target) {
+            if (toggle.checked) {
+                target.classList.remove('disabled-section');
+            } else {
+                target.classList.add('disabled-section');
+            }
+        }
+
+        // 1. 페이지 로드 시 초기 상태 적용
+        updateStatus(reminderToggle, reminderOptions);
+        updateStatus(trashToggle, trashOptions);
+
+        // 2. 스위치 클릭 시 실시간 변경 이벤트 리스너
+        reminderToggle.addEventListener('change', () => updateStatus(reminderToggle, reminderOptions));
+        trashToggle.addEventListener('change', () => updateStatus(trashToggle, trashOptions));
+    });
+</script>
+{% endblock %}

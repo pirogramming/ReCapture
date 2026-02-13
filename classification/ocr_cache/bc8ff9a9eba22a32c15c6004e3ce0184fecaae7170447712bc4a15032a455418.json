@@ -1,0 +1,35 @@
+{
+  "full_text": "00:00\nLimited time\nYour Grade\n12\n$5\nScore Record\nScore1117\nLevel 25\n1551\nlevel 29\n1\n1809\nlevel 1\n3\n1548\nlevel 28\nYou can restart the game later\nBack to Selection\n80\n2",
+  "lines": [
+    "00:00 Limited time",
+    "Your Grade",
+    "12",
+    "$ 5",
+    "Score Record",
+    "Score1117",
+    "Level 25",
+    "1551 level 29",
+    "1 1809 level 1",
+    "3 1548 level 28",
+    "You can restart the game later",
+    "Back to Selection",
+    "80",
+    "2"
+  ],
+  "confidences": [
+    0.9922631978988647,
+    0.9009687900543213,
+    0.624894380569458,
+    0.6260195970535278,
+    0.9814773201942444,
+    0.9768344759941101,
+    0.9900668263435364,
+    0.977180540561676,
+    0.9701982140541077,
+    0.9717446565628052,
+    0.963941216468811,
+    0.9904207587242126,
+    0.7651766538619995,
+    0.9326514601707458
+  ]
+}
