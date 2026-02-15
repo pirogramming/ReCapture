@@ -60,6 +60,7 @@
         {% if current_sub_category %}<input type="hidden" name="sub_category_id" value="{{ current_sub_category }}">{% endif %}
         {% if is_bookmarked %}<input type="hidden" name="bookmarked" value="true">{% endif %}
     </form>
+    
     <button class="btn-action btn-upload" onclick="document.getElementById('fileInput').click()">
         <i class="fa-solid fa-images"></i>
     </button>
@@ -72,6 +73,10 @@
 
     <button class="btn-action btn-google" id="googlePhotosBtn" onclick="importGooglePhotos()">
         <i class="fa-brands fa-google"></i>
+    </button>
+    <!-- ✅ 드래그&드롭 업로드 토글 버튼(추가) -->
+    <button class="btn-action btn-upload" id="dragDropToggleBtn" title="드래그 업로드 OFF">
+        <i class="fa-solid fa-plus"></i>
     </button>
 
     {% if photos and current_category_name == '분류 전' %}
@@ -471,14 +476,7 @@ function startImportPolling() {
     }, 2000);
 }
 
-async function uploadPhotos(event) {
-    const files = event.target.files;
-    if (!files || files.length === 0) return;
 
-    const formData = new FormData();
-    for (let file of files) {
-        formData.append('files', file);
-    }
 
     try {
         const res = await fetch(`${API_BASE}/upload`, {

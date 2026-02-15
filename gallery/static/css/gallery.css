@@ -466,3 +466,26 @@
 @media (max-width: 360px){
   .header-search-form{ max-width: 110px; }
 }
+
+/* drag and drop*/
+.dropzone {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 123, 255, 0.15);
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-items: center;
+  z-index: 9999;
+}
+
+.dropzone-inner {
+  background: white;
+  border: 2px dashed #007bff;
+  border-radius: 16px;
+  padding: 28px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.dropzone-title { font-size: 18px; font-weight: 800; color: #1a1a1a; }
+.dropzone-sub { margin-top: 6px; font-size: 13px; color: #666; }
